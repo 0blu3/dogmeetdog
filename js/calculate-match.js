@@ -60,3 +60,6 @@ function calculatePercentMatch() {
     });
   }
 }
+
+calculatePercentMatch();
+localStorage.setItem('dogs', dogs);
