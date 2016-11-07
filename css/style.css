@@ -1,4 +1,7 @@
 /********* Layout **********/
+
+
+
 body {
 	background: #888;
 }
@@ -6,14 +9,14 @@ body {
 .container {
 	background: white;
 	margin-bottom: 0;
-	font-family: 'Antic Slab', serif;
+	font-family: 'Roboto', sans-serif;
 	color: black;
 }
 header {
 	background: #444;
 	padding-top: 10px;
 	height: 70px;
-	font-family: 'Work Sans', sans-serif;
+	font-family: 'Fascinate Inline', cursive;
 	color: white;
 }
 header h3 {
