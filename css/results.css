@@ -1,0 +1,50 @@
+#results {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.profile-box {
+  width: 150px;
+  display: inline-block;
+}
+
+.profile-pic {
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+.profile-name {
+  margin:0 auto;
+  text-align: center;
+}
+
+.profile-name p {
+  margin: 0 auto;
+}
+
+.match-percent {
+  margin: 0 auto;
+  font-size: 64px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.great-match {
+  color: green;
+}
+
+.okay-match {
+  color: yellow;
+}
+
+.bad-match {
+  color: orange;
+}
+
+.poor-match {
+  color: red;
+}
+
+img {
+  border-radius: 5px;
+}
