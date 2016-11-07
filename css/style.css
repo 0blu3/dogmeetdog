@@ -120,3 +120,36 @@ footer ul {
    from { background-position:    0px; }
      to { background-position: -1015px; }
 }
+
+/* Form styles */
+
+label {
+	margin-top: 5px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+#form {
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: solid;
+	padding: 20px;
+	background-color: white;
+}
+
+.radioLabel {
+	display: block;
+}
+
+.bulletOptions {
+	display: inline;
+	font-weight: 200;
+}
+
+.radioBullet {
+	display: inline;
+	margin-right: 4px;
+}
