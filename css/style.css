@@ -88,7 +88,7 @@ footer ul {
 /****** Keyframes - Dog ********/
 
 #dog {
-	background: transparent url('../assets/images/murphy.indexed.png') 0px 0px no-repeat;
+	background: transparent url('../Assets/images/logo/murphy.indexed.png') 0px 0px no-repeat;
 	position:absolute;
 	-webkit-transform: translateZ(0);
 	width: 145px;
