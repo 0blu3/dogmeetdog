@@ -11,25 +11,134 @@
 <body>
   <div class="container">
     <header>
-      <div id="dog" class="offset-by-one column four columns">
-         </div>
-         <div id="logo" class="offset-by-three columns six columns add-bottom">
-            <h1>Dog Meet Dog</h1>
-          </div>
-             </header>
-          <nav>
-            <ul>
-              <a href="index.html"><li class="active">Home</li></a>
-              <a href="main.html"><li>Main</li></a>
-              <a href="about-us.html"><li>About Us</li></a>
-            </ul>
-          </nav>
+      <div id="dog" class="offset-by-one column four columns"></div>
+      <div id="logo" class="offset-by-three columns six columns add-bottom">
+        <h1>Dog Meet Dog</h1>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <a href="index.html"><li class="active">Home</li></a>
+        <a href="main.html"><li>Main</li></a>
+        <a href="about-us.html"><li>About Us</li></a>
+      </ul>
+    </nav>
 
     <div class="main twelve columns add-bottom">
-      <h3>Start Here!</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
+      <div id="form">
+        <h3>Tell us a little about you and your furry friend.</h3>
+        <form id="registration-form">
+          <fieldset>
+            <label class="contactInput">First Name:</label>
+            <input id="first_name"type="text"></input>
+
+            <label class="contactInput">Last Name:</label>
+            <input id="last_name"type="text"></input>
+
+            <label class="contactInput">Contact Number:</label>
+            <input id="contact_number"type="text"></input>
+
+            <label class="contactInput">Email:</label>
+            <input id="email"type="text"></input>
+
+            <label class="contactInput">Dog Name:</label>
+            <input id="pups_name"type="text"></input>
+
+            <label class="contactInput">Breed:</label>
+            <input id="breed" type="text"></input>
+
+            <label class="radioLabel">Gender:</label>
+            <label class="bulletOptions" for="female">Female</label>
+            <input id="female" type="radio" name="gender">
+
+            <label class="bulletOptions" for="male">Male</label>
+            <input id="male" type="radio" name="gender"><br>
+
+            <label class="radioLabel" >Age:</label>
+            <label class="bulletOptions" for="1-4">1-4 Years</label>
+            <input class="radioBullet" id="1-4" type="radio" name="age">
+            <label class="bulletOptions" for="5-8">5-8 Years</label>
+            <input class="radioBullet" id="5-8" type="radio" name="age">
+            <label class="bulletOptions" for="9-12">9-12 Years</label>
+            <input class="radioBullet" id="9-12" type="radio" name="age">
+            <label class="bulletOptions" for="13">13 Years or older (Good Job!)</label>
+            <input class="radioBullet" id="13" type="radio" name="age"><br>
+
+            <h3>Likes and Dislikes:</h3>
+            <p>Rate on a scale of one to five, one being dislikes A LOT, five being LOVES.</p>
+
+            <label class="radioLabel" for="swimming">Swimming</label>
+            <label class="bulletOptions" for="1">1</label>
+            <input class="radioBullet" id="1" type="radio" name="swimming">
+            <label class="bulletOptions" for="2">2</label>
+            <input class="radioBullet" id="2" type="radio" name="swimming">
+            <label class="bulletOptions" for="3">3</label>
+            <input class="radioBullet" id="3" type="radio" name="swimming">
+            <label class="bulletOptions" for="4">4</label>
+            <input class="radioBullet" id="4" type="radio" name="swimming">
+            <label class="bulletOptions" for="5">5</label>
+            <input class="radioBullet" id="5" type="radio" name="swimming">
+
+            <label class="radioLabel" for="fetch">Fetch</label>
+            <label class="bulletOptions" for="1">1</label>
+            <input class="radioBullet" id="1" type="radio" name="fetch">
+            <label class="bulletOptions" for="2">2</label>
+            <input class="radioBullet" id="2" type="radio" name="fetch">
+            <label class="bulletOptions" for="3">3</label>
+            <input class="radioBullet" id="3" type="radio" name="fetch">
+            <label class="bulletOptions" for="4">4</label>
+            <input class="radioBullet" id="4" type="radio" name="fetch">
+            <label class="bulletOptions" for="5">5</label>
+            <input class="radioBullet" id="5" type="radio" name="fetch">
+
+            <label class="radioLabel" for="walks">Walks</label>
+            <label class="bulletOptions" for="1">1</label>
+            <input class="radioBullet" id="1" type="radio" name="walks">
+            <label class="bulletOptions" for="2">2</label>
+            <input class="radioBullet" id="2" type="radio" name="walks">
+            <label class="bulletOptions" for="3">3</label>
+            <input class="radioBullet" id="3" type="radio" name="walks">
+            <label class="bulletOptions" for="4">4</label>
+            <input class="radioBullet" id="4" type="radio" name="walks">
+            <label class="bulletOptions" for="5">5</label>
+            <input class="radioBullet" id="5" type="radio" name="walks">
+
+            <label class="radioLabel" for="running">Partner Running</label>
+            <label class="bulletOptions" for="1">1</label>
+            <input class="radioBullet" id="1" type="radio" name="running">
+            <label class="bulletOptions" for="2">2</label>
+            <input class="radioBullet" id="2" type="radio" name="running">
+            <label class="bulletOptions" for="3">3</label>
+            <input class="radioBullet" id="3" type="radio" name="running">
+            <label class="bulletOptions" for="4">4</label>
+            <input class="radioBullet" id="4" type="radio" name="running">
+            <label class="bulletOptions" for="5">5</label>
+            <input class="radioBullet" id="5" type="radio" name="running">
+
+            <label class="radioLabel" for="sunBathing">Sun Bathing</label>
+            <label class="bulletOptions" for="1">1</label>
+            <input class="radioBullet" id="1" type="radio" name="sunBathing">
+            <label class="bulletOptions" for="2">2</label>
+            <input class="radioBullet" id="2" type="radio" name="sunBathing">
+            <label class="bulletOptions" for="3">3</label>
+            <input class="radioBullet" id="3" type="radio" name="sunBathing">
+            <label class="bulletOptions" for="4">4</label>
+            <input class="radioBullet" id="4" type="radio" name="sunBathing">
+            <label class="bulletOptions" for="5">5</label>
+            <input class="radioBullet" id="5" type="radio" name="sunBathing">
+
+          </fieldset>
+        </form>
+      </div>
+      <div id="dog" class="twelve columns"></div>
+      <footer class="twelve columns">
+        <ul>
+          <li class="grey copyright center">Copyright 2016 &copy; g@no.evil</li>
+        </ul>
+      </footer>
     </div>
+
     <footer class="twelve columns">
       <ul>
         <li class="grey copyright center">Copyright 2016 &copy; g@no.evil</li>
