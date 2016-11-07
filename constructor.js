@@ -1,11 +1,14 @@
 'use strict';
 
-var dogs = [];
+var dogs = []; // Dummy profiles are pushed here.
+
+// Pre-populating some arrays with options to pull from for filling out the profile form so that it matches the options used in the dummy profiles.
 var agePrefs = ['About the same', 'Younger', 'Older', 'No Preference'];
 var sizes = ['Small', 'Medium', 'Large', 'No Preference'];
 var neighborhoods = ['Capitol Hill', 'Downtown Seattle', 'West Seattle', 'Ballard', 'Queen Anne', 'Belltown', 'Fremont', 'Unversity District', 'North Seattle', 'Green Lake', 'Beacon Hill', 'South Lake Union', 'Other'];
 var fixedPreference = ['Fixed', 'Intact', 'No Preference'];
 
+// The actual constructor function and dummy accounts.
 function Dog(name, breed, size, age, sex, fixed, neighborhood, prefAge, prefSize, prefSex, prefFixed, fileName){
   this.name = name;
   this.breed = breed;
