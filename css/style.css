@@ -5,13 +5,13 @@ body {
 
 .container {
 	background: white;
-	padding: 20px 0 0;
 	margin-bottom: 0;
 	font-family: 'Antic Slab', serif;
 	color: black;
 }
 header {
 	background: #444;
+	padding-top: 10px;
 	height: 70px;
 	font-family: 'Work Sans', sans-serif;
 	color: white;
@@ -20,8 +20,14 @@ header h3 {
 	color: #fff;
 	line-height: 40px;
 }
+nav {
+	width: 100%;
+	background: #444;
+	height: 50px;
+
+}
 nav ul li {
-	float: left;
+	display: inline-block;
 	margin-left: 30px;
 	line-height: 40px;
 	list-style-type: none;
@@ -47,8 +53,7 @@ img {
 	display: inline-block;
 }
 nav {
-	height: 50px;
-	display: inline-block;
+
 }
 .main {
 	padding: 30px;
@@ -83,10 +88,9 @@ footer ul {
 /****** Keyframes - Dog ********/
 
 #dog {
-	background: transparent url('../assets/images/murphy.indexed.png') 0px 0px no-repeat;
+	background: transparent url('../Assets/images/logo/murphy.indexed.png') 0px 0px no-repeat;
 	position:absolute;
 	-webkit-transform: translateZ(0);
-	margin:163px 0 0px 35px;
 	width: 145px;
 	height: 65px;
 	z-index: 200;
