@@ -91,37 +91,11 @@ footer ul {
 /****** Keyframes - Dog ********/
 
 #dog {
-	background: transparent url('../Assets/images/logo/murphy.indexed.png') 0px 0px no-repeat;
-	position:absolute;
-	-webkit-transform: translateZ(0);
-	width: 145px;
-	height: 65px;
-	z-index: 200;
-    -webkit-animation: dog .7s steps(7) infinite;
-       -moz-animation: dog .7s steps(7) infinite;
-        -ms-animation: dog .7s steps(7) infinite;
-         -o-animation: dog .7s steps(7) infinite;
-            animation: dog .7s steps(7) infinite;
-}
-@-webkit-keyframes dog {
-   from { background-position:    0px; }
-     to { background-position: -1015px; }
-}
-@-moz-keyframes dog {
-   from { background-position:    0px; }
-     to { background-position: -1015px; }
-}
-@-ms-keyframes dog {
-   from { background-position:    0px; }
-     to { background-position: -1015px; }
-}
-@-o-keyframes dog {
-   from { background-position:    0px; }
-     to { background-position: -1015px; }
-}
-@keyframes dog {
-   from { background-position:    0px; }
-     to { background-position: -1015px; }
+	background: url(../Assets/images/logo/dog-logo.png) 0px 0px no-repeat;
+	background-size: cover;
+	height: 70px;
+	width: 70px;
+	display: inline-block;
 }
 
 /* Form styles */
