@@ -1,4 +1,7 @@
 /********* Layout **********/
+
+
+
 body {
 	background: #888;
 }
@@ -6,14 +9,14 @@ body {
 .container {
 	background: white;
 	margin-bottom: 0;
-	font-family: 'Antic Slab', serif;
+	font-family: 'Roboto', sans-serif;
 	color: black;
 }
 header {
 	background: #444;
 	padding-top: 10px;
 	height: 70px;
-	font-family: 'Work Sans', sans-serif;
+	font-family: 'Fascinate Inline', cursive;
 	color: white;
 }
 header h3 {
@@ -88,7 +91,7 @@ footer ul {
 /****** Keyframes - Dog ********/
 
 #dog {
-	background: transparent url('../assets/images/murphy.indexed.png') 0px 0px no-repeat;
+	background: transparent url('../Assets/images/logo/murphy.indexed.png') 0px 0px no-repeat;
 	position:absolute;
 	-webkit-transform: translateZ(0);
 	width: 145px;
@@ -119,4 +122,37 @@ footer ul {
 @keyframes dog {
    from { background-position:    0px; }
      to { background-position: -1015px; }
+}
+
+/* Form styles */
+
+label {
+	margin-top: 5px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+#form {
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: solid;
+	padding: 20px;
+	background-color: white;
+}
+
+.radioLabel {
+	display: block;
+}
+
+.bulletOptions {
+	display: inline;
+	font-weight: 200;
+}
+
+.radioBullet {
+	display: inline;
+	margin-right: 4px;
 }
