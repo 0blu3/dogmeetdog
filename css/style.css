@@ -1,0 +1,122 @@
+/********* Layout **********/
+body {
+	background: #888;
+}
+
+.container {
+	background: white;
+	margin-bottom: 0;
+	font-family: 'Antic Slab', serif;
+	color: black;
+}
+header {
+	background: #444;
+	padding-top: 10px;
+	height: 70px;
+	font-family: 'Work Sans', sans-serif;
+	color: white;
+}
+header h3 {
+	color: #fff;
+	line-height: 40px;
+}
+nav {
+	width: 100%;
+	background: #444;
+	height: 50px;
+
+}
+nav ul li {
+	display: inline-block;
+	margin-left: 30px;
+	line-height: 40px;
+	list-style-type: none;
+}
+nav.four.columns ul a {
+	color: #fff;
+	text-decoration: none;
+}
+nav.four.columns ul a:hover {
+	color: #a1abd2;
+}
+.active {
+	color: #b1abd2;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	margin: 0; padding: 0;
+}
+#logo {
+	height: 50px;
+	padding-left: 30px;
+	display: inline-block;
+}
+nav {
+
+}
+.main {
+	padding: 30px;
+  min-height: 500px;
+}
+.clickable {
+	width: auto;
+	max-width: 100%;
+	max-height: 90%;
+	display: block;
+	margin: auto;
+}
+footer {
+	margin: 0;
+	height: 75px;
+}
+.center {
+	text-align: center;
+	margin: 0 auto;
+}
+.grey {
+	background-color: rgba(50, 50, 50, 0.3);
+}
+.copyright {
+	text-align: center;
+	padding: 10px 0;
+}
+footer ul {
+	list-style-type: none;
+}
+
+/****** Keyframes - Dog ********/
+
+#dog {
+	background: transparent url('../assets/images/murphy.indexed.png') 0px 0px no-repeat;
+	position:absolute;
+	-webkit-transform: translateZ(0);
+	width: 145px;
+	height: 65px;
+	z-index: 200;
+    -webkit-animation: dog .7s steps(7) infinite;
+       -moz-animation: dog .7s steps(7) infinite;
+        -ms-animation: dog .7s steps(7) infinite;
+         -o-animation: dog .7s steps(7) infinite;
+            animation: dog .7s steps(7) infinite;
+}
+@-webkit-keyframes dog {
+   from { background-position:    0px; }
+     to { background-position: -1015px; }
+}
+@-moz-keyframes dog {
+   from { background-position:    0px; }
+     to { background-position: -1015px; }
+}
+@-ms-keyframes dog {
+   from { background-position:    0px; }
+     to { background-position: -1015px; }
+}
+@-o-keyframes dog {
+   from { background-position:    0px; }
+     to { background-position: -1015px; }
+}
+@keyframes dog {
+   from { background-position:    0px; }
+     to { background-position: -1015px; }
+}
