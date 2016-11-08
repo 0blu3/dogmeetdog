@@ -1,7 +1,20 @@
 'use strict';
 
-var totalMatches = 0;
-var totalPossible = 34;
+var user = {
+  size: 'Large',
+  age: '4',
+  sex: 'Male',
+  fixed: true,
+  neighborhood: 'Capitol Hill',
+  prefAge: 'About the same',
+  prefSex: 'No Preference',
+  prefFixed: 'Fixed',
+  swimming: 5,
+  fetch: 4,
+  walks: 3,
+  running: 2,
+  sunBathing: 1
+};
 
 // This part calculates how much a dog matches the user non-numerical values
 function matchNeighborhood(i) {
@@ -111,14 +124,17 @@ function getPercentage(i) {
 }
 
 // Calculates the percent of matches for each dog and sort by percentage.
+var totalMatches = 0;
+var totalPossible = 34;
 function calculatePercentMatch() {
   for (var i = 0; i < dogs.length; i++) {
     countMatches(i);
     getPercentage(i);
-    dogs.sort(function(a, b) {
-      return b.matchPercentage - a.matchPercentage;
-    });
+    totalMatches = 0;
   }
+  dogs.sort(function(a, b) {
+    return b.matchPercentage - a.matchPercentage;
+  });
 }
 
 calculatePercentMatch();
