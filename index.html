@@ -32,11 +32,8 @@
         <h3>Tell us a little about you and your furry friend.</h3>
         <form id="registration-form">
           <fieldset>
-            <label class="contactInput">First Name:</label>
-            <input id="first_name"type="text"></input>
-
-            <label class="contactInput">Last Name:</label>
-            <input id="last_name"type="text"></input>
+            <label class="contactInput">Full Name:</label>
+            <input id="name"type="text"></input>
 
             <label class="contactInput">Contact Number:</label>
             <input id="contact_number"type="text"></input>
@@ -160,11 +157,20 @@
             <label class="radioLabel">Spay & Neutured Preferences:</label>
             <label class="bulletOptions" for="prefFixed">Fixed</label>
             <input class="radioBullet" id="prefFixed" type="radio" name="spayNeuPref">
-            <label class="bulletOptions" for="preferIntact">Intact</label>
-            <input class="radioBullet" id="preferIntact" type="radio" name="spayNeuPref">
             <label class="bulletOptions" for="noPreference">No Preference</label>
             <input class="radioBullet" id="noPreference" type="radio" name="spayNeuPref">
 
+            <label class="radioLabel">Size:</label>
+            <label class="bulletOptions" for="small">Small</label>
+            <input class="radioBullet" id="small" type="radio" name="sizes">
+            <label class="bulletOptions" for="medium">Medium</label>
+            <input class="radioBullet" id="medium" type="radio" name="sizes">
+            <label class="bulletOptions" for="large">Large</label>
+            <input class="radioBullet" id="large" type="radio" name="sizes">
+            <label class="bulletOptions" for="noPref">No Preference</label>
+            <input class-"radioBullet" id="noPref" type="radio" name="sizes">
+
+            <button class="submit" type="button">Submit</button>
           </fieldset>
         </form>
       </div>
