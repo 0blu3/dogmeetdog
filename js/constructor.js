@@ -23,6 +23,7 @@ function Dog(name, breed, size, age, sex, fixed, neighborhood, prefAge, prefSize
   this.prefFixed = prefFixed;
   this.filePath = 'Assets/images/profile-photos/' + fileName;
   this.liked = false;
+  this.totalMatches = 0;
   this.matchPercentage;
   dogs.push(this);
 }
