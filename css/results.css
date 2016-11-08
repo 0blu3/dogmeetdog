@@ -45,6 +45,11 @@
   color: red;
 }
 
+.label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
 img {
   border-radius: 5px;
   margin: 0 auto;
