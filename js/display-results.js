@@ -14,29 +14,30 @@ function makeNewContainingElement(tag, innerText, parent, childId, cssClass) {
   parent.appendChild(newEl);
 }
 
-function makeNewAnchor(href, parent, childId, cssClass) {
+function makeNewAnchor(href, parent, childId) {
   var parent = document.getElementById(parent);
   var newAnchor = document.createElement('a');
   newAnchor.setAttribute('href', href);
   newAnchor.setAttribute('id', childId);
-  newAnchor.setAttribute('class', cssClass);
   parent.appendChild(newAnchor);
 }
 
-function makeNewImage(src, parent) {
+function makeNewImage(src, parent, childId, cssClass) {
   var parent = document.getElementById(parent);
   var newImg = document.createElement('img');
   newImg.setAttribute('src', src);
+  newImg.setAttribute('id', childId);
+  newImg.setAttribute('class', cssClass);
   parent.appendChild(newImg);
 }
 
 // Renders the HTML of the profiles from the objects in the array
-function makeProfiles() {
+function makeProfileBoxes() {
   for (var i = 0; i < topDogs; i++) {
     makeNewContainingElement('div', '', 'results', rankedDogs[i].name, 'profile-box');
     makeNewContainingElement('div', '', rankedDogs[i].name, rankedDogs[i].name + '-pic', 'profile-pic');
-    makeNewAnchor('profile.html', rankedDogs[i].name + '-pic', i, 'profile-link');
-    makeNewImage(rankedDogs[i].filePath, i, 'clickable');
+    makeNewAnchor('profile.html', rankedDogs[i].name + '-pic', rankedDogs[i].name + '-link');
+    makeNewImage(rankedDogs[i].filePath, rankedDogs[i].name + '-link', i, 'clickable');
     makeNewContainingElement('div', '', rankedDogs[i].name, rankedDogs[i].name + '-name', 'profile-name');
     makeNewContainingElement('p', rankedDogs[i].name, rankedDogs[i].name + '-name', '', '');
     makeNewContainingElement('div', '', rankedDogs[i].name, rankedDogs[i].name + '-percent', 'match-percent');
@@ -64,19 +65,20 @@ function percentageColor() {
 
 function getClickedArrayIndex(event) {
   var profileClick = event.target.id;
-  localStorage.setItem('profileClick', profileClick);
-}
-
-var anchorTags = document.getElementsByClassName('profile-link');
-for (var i = 0; i < anchorTags.length; i++) {
-  console.log('hi there');
-  anchorTags[i].addEventListener('click', getClickedArrayIndex);
+  localStorage.setItem('profileClick', JSON.stringify(profileClick));
 }
 
 // The function that does everying at once.
 function displayResults() {
-  makeProfiles();
+  makeProfileBoxes();
   percentageColor();
 }
 
+// Render page and add event listeners
 displayResults();
+
+var imgTags = document.getElementsByClassName('clickable');
+for (var i = 0; i < imgTags.length; i++) {
+  console.log('hi there');
+  imgTags[i].addEventListener('click', getClickedArrayIndex);
+}

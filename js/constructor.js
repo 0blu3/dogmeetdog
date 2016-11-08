@@ -9,7 +9,7 @@ var neighborhoods = ['Capitol Hill', 'Downtown Seattle', 'West Seattle', 'Ballar
 var fixedPreference = ['Fixed', 'Intact', 'No Preference'];
 
 // The actual constructor function and dummy accounts.
-function Dog(name, breed, size, age, sex, fixed, neighborhood, prefAge, prefSize, prefSex, prefFixed, fileName){
+function Dog(name, breed, size, age, sex, fixed, neighborhood, prefAge, prefSize, prefSex, prefFixed, swimming, fetch, walks, running, sunBathing, fileName){
   this.name = name;
   this.breed = breed;
   this.size = size;
@@ -21,6 +21,11 @@ function Dog(name, breed, size, age, sex, fixed, neighborhood, prefAge, prefSize
   this.prefSize = prefSize;
   this.prefSex = prefSex;
   this.prefFixed = prefFixed;
+  this.swimming = swimming;
+  this.fetch = fetch;
+  this.walks = walks;
+  this.running = running;
+  this.sunBathing = sunBathing;
   this.filePath = 'Assets/images/profile-photos/' + fileName;
   this.liked = false;
   this.totalMatches = 0;
@@ -28,16 +33,16 @@ function Dog(name, breed, size, age, sex, fixed, neighborhood, prefAge, prefSize
   dogs.push(this);
 }
 
-new Dog('Allison', 'German Shepherd', 'Large', 4, 'Female', true, 'Capitol Hill', 'About the same', 'Large', 'Female', 'No Preference', 'allison.jpg');
-new Dog('Cassius', 'French Bulldog', 'Small', 8, 'Male', true, 'Downtown Seattle', 'Older', 'Small', 'No Preference', 'No Preference', 'cassius.jpg');
-new Dog('Buggy', 'Pug', 'Small', 1, 'Female', false, 'West Seattle', 'Younger', 'No Preference', 'No Preference', 'Fixed', 'buggy.jpg');
-new Dog('Zeke', 'Husky', 'Medium', 2, 'Male', true, 'University District', 'No Preference', 'No Preference', 'No Preference', 'No Preference', 'zeke.jpg');
-new Dog('Cheri', 'Golden Retriever', 'Large', 9, 'Female', true, 'Ballard', 'About the same', 'Large', 'Male', 'Fixed', 'cheri.jpg');
-new Dog('Lili', 'Mixed Breed', 'Small', 3, 'Female', false, 'Queen Anne', 'Older', 'Small', 'Female', 'Fixed', 'lili.jpg');
-new Dog('Stan', 'Corgi', 'Medium', 5, 'Male', false, 'Belltown', 'Younger', 'No Preference', 'No Preference', 'Intact', 'stan.jpg');
-new Dog('Clara', 'Pit Bull', 'Large', 6, 'Female', true, 'Freemont', 'No Preference', 'Large', 'Male', 'No Preference', 'clara.jpg');
-new Dog('Murphy', 'Yellow Lab', 'Large', 7, 'Male', false, 'Green Lake', 'Younger', 'Medium', 'Female', 'No Preference', 'murphy.jpg');
-new Dog('Chance', 'Yellow Lab', 'Large', 4, 'Male', true, 'Beacon Hill', 'About the same', 'No Preference', 'No Preference', 'No Preference', 'chance.jpg');
+new Dog('Allison', 'German Shepherd', 'Large', 4, 'Female', true, 'Capitol Hill', 'About the same', 'Large', 'Female', 'No Preference', 1, 2, 3, 4, 5, 'allison.jpg');
+new Dog('Cassius', 'French Bulldog', 'Small', 8, 'Male', true, 'Downtown Seattle', 'Older', 'Small', 'No Preference', 'No Preference', 5, 4, 3, 2, 1, 'cassius.jpg');
+new Dog('Buggy', 'Pug', 'Small', 1, 'Female', false, 'West Seattle', 'Younger', 'No Preference', 'No Preference', 'Fixed', 2, 1, 4, 5, 3, 'buggy.jpg');
+new Dog('Zeke', 'Husky', 'Medium', 2, 'Male', true, 'University District', 'No Preference', 'No Preference', 'No Preference', 'No Preference', 5, 5, 5, 5, 5, 'zeke.jpg');
+new Dog('Cheri', 'Golden Retriever', 'Large', 9, 'Female', true, 'Ballard', 'About the same', 'Large', 'Male', 'Fixed', 1, 1, 1, 1, 1, 'cheri.jpg');
+new Dog('Lili', 'Mixed Breed', 3, 'Small', 'Female', false, 'Queen Anne', 'Older', 'Small', 'Female', 'Fixed', 4, 5, 4, 5, 2, 'lili.jpg');
+new Dog('Stan', 'Corgi', 5, 'Medium', 'Male', false, 'Belltown', 'Younger', 'No Preference', 'No Preference', 'No Preference', 2, 5, 3, 1, 4, 'stan.jpg');
+new Dog('Clara', 'Pit Bull', 6, 'Large', 'Female', true, 'Freemont', 'No Preference', 'Large', 'Male', 'No Preference', 4, 2, 5, 3, 1, 'clara.jpg');
+new Dog('Murphy', 'Yellow Lab', 7, 'Large', 'Male', false, 'Green Lake', 'Younger', 'Medium', 'Female', 'No Preference', 3, 4, 3, 4, 5, 'murphy.jpg');
+new Dog('Chance', 'Yellow Lab', 4, 'Large', 'Male', true, 'Beacon Hill', 'About the same', 'No Preference', 'No Preference', 'No Preference', 5, 5, 5, 5, 5, 'chance.jpg');
 new Dog('Lisa', 'French Bulldog', 'Small', 3, 'Female', true, 'Capitol Hill', 'No Preference', 'Small', 'No Preference', 'Fixed', 'lisa.jpg');
 new Dog('Tiny', 'English Mastiff', 'Large', 5, 'Male', true, 'Green Lake', 'About the same', 'No Preference', 'Female', 'No Preference', 'tiny.jpg');
 new Dog('Cosmo', 'Beagle', 'Medium', 8, 'Male', false, 'Ballard', 'Older', 'No Preference', 'No Preference', 'Male', 'Fixed', 'cosmo.jpg');
