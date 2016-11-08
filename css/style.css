@@ -130,3 +130,19 @@ h3 {
 	display: inline;
 	margin-right: 4px;
 }
+#parks-map {
+	height: 550px;
+	width: 100%;
+}
+.parkInfo {
+	height: 35%;
+	width: 100%;
+	margin: 10px;
+}
+h3.parkLocation {
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.no-list-style {
+	list-style-type: none;
+}
