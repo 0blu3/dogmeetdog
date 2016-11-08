@@ -144,7 +144,7 @@ function matchDogFixedPref() {
   }
 }
 
-// This part calculates percent match between numerical values;
+// This part scores matches between numerical values;
 function compareSwimming() {
   for (var i = 0; i < dogs.length; i++) {
     var difference = Math.abs(user.swimming - dogs[i].swimming);
