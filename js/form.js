@@ -6,36 +6,47 @@ function submit(event) {
   localStorage.setItem('name', name.value);
   console.log(inputName);
   var inputNumber = event.target.contact_number.value;
+  console.log(inputNumber);
   localStorage.setItem('contact_number', contact_number.value);
-  var inputEmail = event.target.inputEmail.value;
-  localStorage.setItem('email', email.value);
-  var inputPupName = event.target.inputPupName.value;
-  localStorage.setItem('pups_name', pups_name.value);
+  var inputPupName = event.target.pupName.value;
+  localStorage.setItem('pups_name', pupName.value);
+  console.log(inputPupName);
   var inputBreed = event.target.breed.value;
   localStorage.setItem('breed', breed.value);
-  var inputGender = event.target.gender.value;
-  localStorage.setItem('gender', gender.value);
+  console.log(inputBreed);
+
+  var inputGender = document.getElementById('gender');
+  for (var i = 0; i < inputGender.length; i++) {
+    if(inputGender[i].checked) {
+      return inputGender[i].value;
+      console.log(inputGender);
+    }
+  }
+
   var inputAge = event.target.age.value;
   localStorage.setItem('age', age.value);
   console.log(age);
-  var inputSwimming = event.target.swimming.value;
-  console.log(inputSwimming);
-  localStorage.setItem('swimming', swimming.value);
-  var inputFetch = document.getElementByTagName('fetch').value;
+
+  var inputSwimming = document.getElementById('swimming');
+  for (var i = 0; i < inputSwimming.length; i++) {
+    inputSwimming[i].value;
+    console.log(inputSwimming);
+  }
+  var inputFetch = document.getElementById('fetch').value;
   localStorage.setItem('fetch', fetch.value);
-  var inputWalks = document.getElementByTagName('walks').value;
+  var inputWalks = document.getElementById('walks').value;
   localStorage.setItem('walks', walks.input);
-  var inputRunning = document.getElementByTagName('running').value;
+  var inputRunning = document.getElementById('running').value;
   localStorage.setItem('running', running.value);
-  var inputSunBathing = document.getElementByTagName('sunBathing').value;
+  var inputSunBathing = document.getElementById('sunBathing').value;
   localStorage.setItem('sunBathing', sunBathing.value);
-  var inputNeighborhood = document.getElementByTagName('neighborhood').value;
+  var inputNeighborhood = document.getElementById('neighborhood').value;
   localStorage.setItem('neighborhood', neighborhood.value);
-  var inputagePref = document.getElementByTagName('agePref').value;
+  var inputagePref = document.getElementById('agePref').value;
   localStorage.setItem('agePref', agePref.value);
-  var inputSpayNeuPref = document.getElementByTagName('spayNeuPref').value;
+  var inputSpayNeuPref = document.getElementById('spayNeuPref').value;
   localStorage.setItem('spayNeuPref', spayNeuPref.value);
-  var inputSize = document.getElementByTagName('sizes').value;
+  var inputSize = document.getElementById('sizes').value;
   localStorage.setItem('sizes', sizes.value);
 }
 var inputForm = document.querySelectorAll('form');
