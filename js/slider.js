@@ -150,3 +150,5 @@ addSwipe = function(el) {
     that.showCurrent(1);
   });
 }
+
+makeSlideShow();
