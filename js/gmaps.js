@@ -10,7 +10,7 @@ function initMap() {
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(0, 22)
   };
-  var myCenter = {lat: 47.7212900, lng: -122.3262670};
+  var myCenter = {lat: 47.6144960, lng: -122.3444780};
   var blueDogPond_loc = {lat: 47.5887420, lng: -122.2985700};
   var drJoseRizal_loc = {lat: 47.5922020, lng: -122.3174960};
   var genesee_loc = {lat: 47.5639080, lng: -122.2789660};
