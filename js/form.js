@@ -1,78 +1,108 @@
 'use strict';
 
+var user = {
+  ownerName: '',
+  pupName: '',
+  contactNumber: '',
+  breed: '',
+  size: '',
+  age: '',
+  sex: '',
+  fixed: '',
+  neighborhood: '',
+  prefAge: '',
+  prefSex: '',
+  prefFixed: '',
+  ratingSwimming: '',
+  ratingFetch: '',
+  ratingWalks: '',
+  ratingRunning: '',
+  ratingSunbathing: '',
+};
+
+function getRatingValues(elementClass) {
+  var radio = document.getElementsByClassName(elementClass);
+  for (var i = 0; i < radio.length; i++) {
+    if (radio[i].checked) {
+      console.log(radio[i].value);
+      user.elementClass = parseInt(radio[i].value);
+    }
+  }
+}
+
 function submit(event) {
   event.preventDefault();
   console.log(event);
-  var inputName = event.target.name.value;
-  localStorage.setItem('name', name.value);
-  console.log(inputName);
-  var inputNumber = event.target.contact_number.value;
-  console.log(inputNumber);
-  localStorage.setItem('contact_number', contact_number.value);
-  var inputPupName = event.target.pupName.value;
-  localStorage.setItem('pups_name', pupName.value);
-  console.log(inputPupName);
-  var inputBreed = event.target.breed.value;
-  localStorage.setItem('breed', breed.value);
-  console.log(inputBreed);
+  user.ownerName = event.target.name.value;
+  console.log(user.ownerName);
+  user.contactNumber = event.target.contact_number.value;
+  console.log(user.contactNumber);
+  user.pupName = event.target.pupName.value;
+  console.log(user.pupName);
+  user.breed = event.target.breed.value;
+  console.log(user.breed);
 
-  var inputFemale = document.getElementById('female');
-  if(inputFemale.checked) {
-    inputFemale.value;
-    console.log(inputFemale);
-  }
+  getRatingValues('ratingSwimming');
 
-  var inputAge = event.target.age.value;
-  localStorage.setItem('age', age.value);
-  console.log(inputAge);
+  // var inputFemale = document.getElementById('female');
+  // if(inputFemale.checked) {
+  //   inputFemale.value;
+  //   console.log(inputFemale);
+  // }
+  //
+  // var inputAge = event.target.age.value;
+  // localStorage.setItem('age', age.value);
+  // console.log(inputAge);
+  //
+  // var inputSwimming = document.getElementById('swimming');
+  // if(inputSwimming.checked) {
+  //   inputSwimming.value;
+  //   console.log(inputSwimming.value);
+  // }
+  //
+  // var inputFetch = document.getElementById('fetch');
+  // if(inputFetch.checked) {
+  //   inputSwimming.value;
+  //   console.log(inputFetch.value);
+  // }
+  //
+  // var inputWalks = document.getElementById('walks');
+  // if(inputWalks.checked) {
+  //   inputWalks.value;
+  //   console.log(inputWalks.value);
+  // }
+  //
+  // var inputRunning = document.getElementById('running');
+  // if(inputRunning.checked) {
+  //   inputSwimming.value;
+  //   console.log(inputRunning.value);
+  // }
+  //
+  // var inputSunBathing = document.getElementById('sunBathing');
+  // if(inputSunBathing.checked) {
+  //   inputSunBathing.value;
+  //   console.log(inputSunBathing.value);
+  // }
+  //
+  // var inputAgePref = document.getElementById('agePref');
+  // if(inputAgePref.checked) {
+  //   inputAgePref.value;
+  //   console.log(inputAgePref.value);
+  // }
+  //
+  // var inputSpayNeuPref = document.getElementById('spayNeuPref');
+  // if(inputSpayNeuPref.checked) {
+  //   inputSpayNeuPref.value;
+  //   console.log(inputSpayNeuPref.value);
+  // }
+  //
+  // var inputPrefSize = document.getElementById('prefSize');
+  // if(inputPrefSize.checked) {
+  //   inputPrefSize.value;
+  //   console.log(inputPrefSize.value);
+  // }
 
-  var inputSwimming = document.getElementById('swimming');
-  if(inputSwimming.checked) {
-    inputSwimming.value;
-    console.log(inputSwimming);
-  }
 
-  var inputFetch = document.getElementById('fetch');
-  if(inputFetch.checked) {
-    inputSwimming.value;
-    console.log(inputFetch);
-  }
-
-  var inputWalks = document.getElementById('walks');
-  if(inputWalks.checked) {
-    inputWalks.value;
-    console.log(inputWalks);
-  }
-
-  var inputRunning = document.getElementById('running');
-  if(inputRunning.checked) {
-    inputSwimming.value;
-    console.log(inputRunning);
-  }
-
-  var inputSunBathing = document.getElementById('sunBathing');
-  if(inputSunBathing.checked) {
-    inputSunBathing.value;
-    console.log(inputSunBathing);
-  }
-
-  var inputAgePref = document.getElementById('agePref');
-  if(inputAgePref.checked) {
-    inputAgePref.value;
-    console.log(inputAgePref);
-  }
-
-  var inputSpayNeuPref = document.getElementById('spayNeuPref');
-  if(inputSpayNeuPref.checked) {
-    inputSpayNeuPref.value;
-    console.log(inputSpayNeuPref);
-  }
-
-  var inputPrefSize = document.getElementById('prefSize');
-  if(inputPrefSize.checked) {
-    inputPrefSize.value;
-    console.log(inputPrefSize);
-  }
 }
 var inputForm = document.getElementById('registration-form');
 inputForm.addEventListener('submit', submit);
