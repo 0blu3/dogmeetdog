@@ -71,7 +71,7 @@ initialization: function(el, options) {
     swipe: (typeof options.swipe === "undefined") ? false: options.swipe
   };
 
-  this.$items[0].classList.add('matches');
+  this.$items[0].classList.add('matches-show');
   // add 'matches' class to first figure so that the first slide is visible when the slideshow loads
 
   this.injectControls(el);
@@ -90,9 +90,9 @@ showcurrent: function(i) {
     this.counter = (this.counter - 1 < 0) ? this.numItems -1: this.counter -1;
   }
   [].forEach.call(this.$items, function(el) {
-    el.classList.remove('matches');
+    el.classList.remove('matches-show');
   });
-  this.$items[this.counter].classList.add('matches');
+  this.$items[this.counter].classList.add('matches-show');
 }
 
 injectControls: function(el) {
