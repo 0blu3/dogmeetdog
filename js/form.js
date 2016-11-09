@@ -30,6 +30,9 @@ function submit(event) {
   var selected = selectNeighborhood.options[selectNeighborhood.selectedIndex].value;
   console.log(selected);
 
+  var selectNeighborhood = document.getElementById('neighborhood');
+  var selected = selectNeighborhood.options[selectNeighborhood.selectedIndex].value;
+
   function getRadioNumericalValues(elementClass) {
     var radio = document.getElementsByClassName(elementClass);
     for (var i = 0; i < radio.length; i++) {
