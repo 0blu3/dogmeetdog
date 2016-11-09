@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Dog Meet Dog - Park Locations</title>
+  <link href="https://fonts.googleapis.com/css?family=Antic+Slab|Work+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css" media="screen" title="no title">
+  <link rel="stylesheet" href="css/skeleton.css" media="screen" title="no title">
+  <link rel="stylesheet" href="css/style.css" media="screen" title="no title">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div id="dog" class="offset-by-one column one column">
+      </div>
+      <div id="logo" class="six columns add-bottom">
+        <h1>DOG MEET DOG</h1>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <a href="index.html"><li>Home</li></a>
+        <a href="main.html"><li>Main</li></a>
+        <a href="about-us.html"><li>About Us</li></a>
+        <a href="park-locations.html"><li class="active">Park Locations</li></a>
+      </ul>
+    </nav>
+    <div class="main twelve columns add-bottom">
+      <div class="three columns">
+        <ul class="no-list-style">
+          <a href="#"><li>Blue Dog Pond Park - Southeast Seattle</li></a>
+          <a href="#"><li>Dr. Jose Rizal Park - Beacon Hill(north end)</li></a>
+          <a href="#"><li>Genesee Park and Playfield - Southeast Seattle</li></a>
+          <a href="#"><li>Golden Gardens - Ballard</li></a>
+          <a href="#"><li>Kinnear Park - Queen Anne</li></a>
+          <a href="#"><li>Magnolia Manor Park - Magnolia</li></a>
+          <a href="#"><li>Magnuson Park - Sand Point</li></a>
+          <a href="#"><li>Northacres Park - Northwest Seattle</li></a>
+          <a href="#"><li>Regrade Park - Belltown</li></a>
+          <a href="#"><li>Westcrest Park - Highland Park</li></a>
+          <a href="#"><li>Woodland Park - Lake Union</li></a>
+        </ul>
+      </div>
+      <div class="nine columns">
+        <div id="parks-map"></div>
+      </div>
+    </div>
+    <footer class="twelve columns">
+      <ul>
+        <li class="grey copyright center">Copyright 2016 &copy; g@no.evil</li>
+      </ul>
+    </footer>
+  </div><!-- container -->
+  <script src="js/app.js"></script>
+  <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzjyXu_kKK9haFW2ljks0t5EiAt-D3V0c&callback=initMap">
+      </script>  <script src="js/gmaps.js"></script>
+
+</body>
+</html>
