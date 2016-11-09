@@ -3,8 +3,8 @@
 var profileIndex = JSON.parse(localStorage.getItem('profileClick'));
 var dogs = JSON.parse(localStorage.getItem('dogs'));
 var profiledDog = dogs[profileIndex];
-var details = [profiledDog.name, profiledDog.breed, profiledDog.size, profiledDog.age, profiledDog.sex, profiledDog.fixed, profiledDog.neighborhood, profiledDog.prefAge, profiledDog.prefSize, profiledDog.prefSex, profiledDog.prefFixed, profiledDog.swimming, profiledDog.fetch, profiledDog.walks, profiledDog.running, profiledDog.sunBathing];
-var tableLabels = ['Name:', 'Breed:', 'Size:', 'Age:', 'Sex:', 'Spay/Neuter Status:', 'Neighborhood:', 'Age Preference:', 'Size Preference:', 'Sex Preference:', 'Spay/Neuter Preference:', 'Rates Swimming At:', 'Rates Playing Fetch At:', 'Rates Going On Walks At:', 'Rates Running At:', 'Rates Sun Bathing At:'];
+var details = [profiledDog.name, profiledDog.breed, profiledDog.size, profiledDog.age, profiledDog.sex, profiledDog.fixed, profiledDog.neighborhood, profiledDog.prefAge, profiledDog.prefSize, profiledDog.prefSex, profiledDog.prefFixed, profiledDog.swimming, profiledDog.ratingFetch, profiledDog.ratingWalks, profiledDog.ratingRunning, profiledDog.ratingSunbathing];
+var tableLabels = ['Name:', 'Breed:', 'Size:', 'Age:', 'Sex:', 'Spay/Neuter Status:', 'Neighborhood:', 'Age Preference:', 'Size Preference:', 'Sex Preference:', 'Spay/Neuter Preference:', 'Rates Swimming At:', 'Rates Playing ratingSwimming At:', 'Rates Going On Walks At:', 'Rates Running At:', 'Rates Sun Bathing At:'];
 
 var makeNewElement = function(elementTag, elementContent, target, cssClass){
   var newEl = document.createElement(elementTag);
