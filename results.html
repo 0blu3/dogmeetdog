@@ -30,6 +30,21 @@
     <div class="main twelve columns add-bottom">
       <h3>Meet These Dogs!</h3>
       <div id="results">
+        <div class="profile-box">
+          <figure>
+            <div class="matches-slides">
+              <figure>
+                <img src ="assets/images/profile-photos/allison.jpg" width="100%" />
+                <figcaption>Dog name goes here</figcaption>
+              </figure>
+
+              <!-- <figure>
+                <img src="assets/images/profile-photos/zeke.jpg" width="100%" />
+              </figure> -->
+
+            </div>
+          </figure>
+        </div>
       </div>
     </div>
     <footer class="twelve columns">
@@ -38,6 +53,20 @@
       </ul>
     </footer>
   </div><!-- container -->
+  <script src="js/hammer-time.min.js"></script>
+  <script src="js/slider.js"></script>
   <script src="js/display-results.js"></script>
+  <script>
+    var opts = {
+      swipe : true
+  };
+    makeSlideShow('.num1', opts);
+    var opts2 = {
+        auto : false,
+        fullScreen : true,
+        swipe : true
+    };
+  </script>
+
 </body>
 </html>
