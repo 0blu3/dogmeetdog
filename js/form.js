@@ -62,5 +62,6 @@ function submit(event) {
   getRadioTextValues('prefFixed');
   localStorage.setItem('user', JSON.stringify(user));
 }
+
 var inputForm = document.getElementById('registration-form');
 inputForm.addEventListener('submit', submit);

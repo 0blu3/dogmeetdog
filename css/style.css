@@ -133,6 +133,25 @@ h3 {
 	display: inline;
 	margin-right: 4px;
 }
+
+/*.formButton {
+	background-color: #b1abd2;
+}*/
+
+input:hover {
+	background-color: #b1abd2;
+}
+
+submit:hover {
+	background-color: #b1abd2
+}
+
+button {
+	background: #b1abd2;
+	width: 100px;
+	margin-left: 200px;
+}
+
 /** google maps **/
 #parks-map {
 	height: 550px;
@@ -150,16 +169,6 @@ h3.parkLocation {
 .no-list-style {
 	list-style-type: none;
 }
-button {
-	background: #b1abd2;
-	width: 100px;
-	margin-left: 200px;
-}
-
-input:hover {
-	background-color: #b1abd2;
-}
-
 /* accordian on park page */
 
 #park-info.transition, #park-info p, #park-info ul li i:before, #park-info ul li i:after {
