@@ -36,9 +36,6 @@
             <label class="contactInput">Full Name:</label>
             <input id="name"type="text"></input>
 
-            <label class="contactInput">Contact Number:</label>
-            <input id="contact_number"type="text"></input>
-
             <label class="contactInput">Dog Name:</label>
             <input id="pupName"type="text"></input>
 
@@ -46,11 +43,12 @@
             <input id="breed" type="text"></input>
 
             <label class="radioLabel" id="gender">Gender:</label>
+
             <label class="bulletOptions" for="female">Female</label>
-            <input id="female" type="radio" name="gender" value="female">
+            <input class="radioBullet" id="female" type="radio" name="gender" value="female">
 
             <label class="bulletOptions" for="male">Male</label>
-            <input id="male" type="radio" name="gender" value="male"><br>
+            <input class="radioBullet" id="male" type="radio" name="gender" value="male"><br>
 
             <label class="ageInput">Dog age:</label>
             <input id="age" type="text"></input>
@@ -120,8 +118,8 @@
 
             <h3>Playmate Preferences</h3>
 
-            <select name="neighborhood">
-            <option value="">Select Neighborhood</option>
+            <select id="neighborhood" name="neighborhood">
+            <option>Select Neighborhood</option>
             <option value="capHill">Capitol Hill</option>
             <option value="downtown">Downtown Seattle</option>
             <option value="wSeattle">West Seattle</option>
