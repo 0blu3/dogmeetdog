@@ -10,7 +10,7 @@ function initMap() {
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(0, 22)
   };
-  var myCenter = {lat: 47.6253050, lng: -122.3221830};
+  var myCenter = {lat: 47.7212900, lng: -122.3262670};
   var blueDogPond_loc = {lat: 47.5887420, lng: -122.2985700};
   var drJoseRizal_loc = {lat: 47.5922020, lng: -122.3174960};
   var genesee_loc = {lat: 47.5639080, lng: -122.2789660};
@@ -30,7 +30,6 @@ function initMap() {
     scrollwheel: false,
     scaleControl: false
   });
-
   var blueDogPondParkInfo = '<div id="content" class="parkInfo">' +
   '<div id="siteNotice">' +
   '</div>' +
@@ -174,7 +173,7 @@ function initMap() {
   '<div id="siteNotice">' +
   '</div>' +
   '<h3 id="firstHeading" class="firstHeading">Magnuson Park</h3>' + '<h5 class="parkLocation">7400 Sand Point Way NE, Seattle, WA</h5>' +
-  '<div id="bodyContent">' + '<p><b>Magnuson Park</b> is located in the <b>Sand Point</b> The Magnuson off-leash area contains 8.6 acres. It is a place where city hounds can romp with buddies in Seattle’s biggest fully-fenced back yard for canines. This off-leash area is the only one inside city limits with water access (Lake Washington’s freshwater shoreline).</p>' + '<p>This off-leash area has a small and shy dog area within the larger dog park. Fencing and signs were installed in coordination with the <a href="http://molg.org" target="_blank">Magnuson Off Leash Area Group (MOLG)</a></p>' + '</div>' + '</div>';
+  '<div id="bodyContent">' + '<p><b>Magnuson Park</b> is located in the <b>Sand Point</b> The Magnuson off-leash area contains 8.6 acres. It is Seattle’s biggest fully-fenced back yard for canines.</p>' + '<p>This off-leash area has a small and shy dog area within the larger dog park. Fencing and signs were installed in coordination with the <a href="http://molg.org" target="_blank">Magnuson Off Leash Area Group (MOLG)</a></p>' + '</div>' + '</div>';
   var magnusonParkInfoWindow = new google.maps.InfoWindow({
     disableAutoPan: true,
     content: magnusonParkInfo,

@@ -1,33 +1,74 @@
 'use strict';
+var user = {
+  ownerName: '',
+  pupName: '',
+  contactNumber: '',
+  breed: '',
+  size: '',
+  age: '',
+  sex: '',
+  fixed: '',
+  neighborhood: '',
+  prefAge: '',
+  prefSex: '',
+  prefSize: '',
+  prefFixed: '',
+  ratingSwimming: '',
+  ratingFetch: '',
+  ratingWalks: '',
+  ratingRunning: '',
+  ratingSunbathing: '',
+};
 
 function submit(event) {
   event.preventDefault();
-  console.log(event);
   var inputName = event.target.name.value;
-  console.log(inputName);
   var inputPupName = event.target.pupName.value;
-  console.log(inputPupName);
   var inputBreed = event.target.breed.value;
-  console.log(inputBreed);
-
   var inputAge = event.target.age.value;
-  localStorage.setItem('age', age.value);
-  console.log(inputAge);
-
   var selectNeighborhood = document.getElementById('neighborhood');
   var selected = selectNeighborhood.options[selectNeighborhood.selectedIndex].value;
   console.log(selected);
-  //
-  // function selectNeighborhood (){
-  //   var select = document.getElementById('neighborhood').value;
-  //   console.log(select.value);
-  // }
 
-  // var radio = document.getElementsByTagName('input');
-  // for (var i = 0; i < radio.length; i++) {
-  //   if(radio[i].checked); {
-  //     return radio[i].value;
-  //     console.log(radio[i].value);
+  function getRadioNumericalValues(elementClass) {
+    var radio = document.getElementsByClassName(elementClass);
+    for (var i = 0; i < radio.length; i++) {
+      if (radio[i].checked) {
+        console.log(radio[i].value);
+        user[elementClass] = parseInt(radio[i].value);
+      }
+    }
+  }
+
+  function getRadioTextValues(elementClass) {
+    var radio = document.getElementsByClassName(elementClass);
+    for (var i = 0; i < radio.length; i++) {
+      if (radio[i].checked) {
+        console.log(radio[i].value);
+        user[elementClass] = radio[i].value;
+      }
+    }
+  }
+
+  function submit(event) {
+    event.preventDefault();
+    user.ownerName = event.target.name.value;
+    user.contactNumber = event.target.contact_number.value;
+    user.pupName = event.target.pupName.value;
+    user.breed = event.target.breed.value;
+    user.age = parseInt(event.target.age.value);
+    getRadioTextValues('sex');
+    getRadioNumericalValues('ratingSwimming');
+    getRadioNumericalValues('ratingFetch');
+    getRadioNumericalValues('ratingWalks');
+    getRadioNumericalValues('ratingRunning');
+    getRadioNumericalValues('ratingSunbathing');
+    getRadioTextValues('prefAge');
+    getRadioTextValues('prefSex');
+    getRadioTextValues('prefSize');
+    getRadioTextValues('prefFixed');
+    localStorage.setItem('user', JSON.stringify(user));
+  }
 }
 var inputForm = document.getElementById('registration-form');
 inputForm.addEventListener('submit', submit);
