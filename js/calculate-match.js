@@ -1,7 +1,7 @@
 'use strict';
 
 // Used this to test out the script to make sure it was calculating matches.
-
+//
 // var dogs = []; // Dummy profiles are pushed here.
 //
 // // Pre-populating some arrays with options to pull from for filling out the profile form so that it matches the options used in the dummy profiles.
@@ -11,7 +11,7 @@
 // var fixedPreference = ['Fixed', 'Intact', 'No Preference'];
 //
 // // The actual constructor function and dummy accounts.
-// function Dog(name, breed, size, age, sex, fixed, neighborhood, prefAge, prefSize, prefSex, prefFixed, swimming, fetch, walks, running, sunBathing, fileName){
+// function Dog(name, breed, size, age, sex, fixed, neighborhood, prefAge, prefSize, prefSex, prefFixed, ratingSwimming, ratingFetch, ratingWalks, ratingRunning, ratingSunbathing, fileName){
 //   this.name = name;
 //   this.breed = breed;
 //   this.size = size;
@@ -23,11 +23,11 @@
 //   this.prefSize = prefSize;
 //   this.prefSex = prefSex;
 //   this.prefFixed = prefFixed;
-//   this.swimming = swimming;
-//   this.fetch = fetch;
-//   this.walks = walks;
-//   this.running = running;
-//   this.sunBathing = sunBathing;
+//   this.ratingSwimming = ratingSwimming;
+//   this.ratingFetch = ratingFetch;
+//   this.ratingWalks = ratingWalks;
+//   this.ratingRunning = ratingRunning;
+//   this.ratingSunbathing = ratingSunbathing;
 //   this.filePath = 'Assets/images/profile-photos/' + fileName;
 //   this.liked = false;
 //   this.totalMatches = 0;
@@ -45,7 +45,7 @@
 // new Dog('Clara', 'Pit Bull', 6, 'Large', 'Female', true, 'Freemont', 'No Preference', 'Large', 'Male', 'No Preference', 4, 2, 5, 3, 1, 'clara.jpg');
 // new Dog('Murphy', 'Yellow Lab', 7, 'Large', 'Male', false, 'Green Lake', 'Younger', 'Medium', 'Female', 'No Preference', 3, 4, 3, 4, 5, 'murphy.jpg');
 // new Dog('Chance', 'Yellow Lab', 4, 'Large', 'Male', true, 'Beacon Hill', 'About the same', 'No Preference', 'No Preference', 'No Preference', 5, 5, 5, 5, 5, 'chance.jpg');
-
+//
 // var user = {
 //   size: 'Large',
 //   age: '4',
@@ -55,11 +55,11 @@
 //   prefAge: 'About the same',
 //   prefSex: 'No Preference',
 //   prefFixed: 'Fixed',
-//   swimming: 5,
-//   fetch: 4,
-//   walks: 3,
-//   running: 2,
-//   sunBathing: 1
+//   ratingSwimming: 5,
+//   ratingFetch: 4,
+//   ratingWalks: 3,
+//   ratingRunning: 2,
+//   ratingSunbathing: 1
 // };
 
 // This part calculates how much a dog matches the user non-numerical values
@@ -144,10 +144,10 @@ function matchDogFixedPref() {
   }
 }
 
-// This part calculates percent match between numerical values;
-function compareSwimming() {
+// This part scores matches between numerical values;
+function compareratingSwimming() {
   for (var i = 0; i < dogs.length; i++) {
-    var difference = Math.abs(user.swimming - dogs[i].swimming);
+    var difference = Math.abs(user.ratingSwimming - dogs[i].ratingSwimming);
     if (difference === 0) {
       dogs[i].totalMatches += 4;
     } else if (difference === 1) {
@@ -160,9 +160,9 @@ function compareSwimming() {
   }
 }
 
-function compareFetch() {
+function compareratingFetch() {
   for (var i = 0; i < dogs.length; i++) {
-    var difference = Math.abs(user.fetch - dogs[i].fetch);
+    var difference = Math.abs(user.ratingFetch - dogs[i].ratingFetch);
     if (difference === 0) {
       dogs[i].totalMatches += 4;
     } else if (difference === 1) {
@@ -175,9 +175,9 @@ function compareFetch() {
   }
 }
 
-function compareWalks() {
+function compareratingWalks() {
   for (var i = 0; i < dogs.length; i++) {
-    var difference = Math.abs(user.walks - dogs[i].walks);
+    var difference = Math.abs(user.ratingWalks - dogs[i].ratingWalks);
     if (difference === 0) {
       dogs[i].totalMatches += 4;
     } else if (difference === 1) {
@@ -190,9 +190,9 @@ function compareWalks() {
   }
 }
 
-function compareRunning() {
+function compareratingRunning() {
   for (var i = 0; i < dogs.length; i++) {
-    var difference = Math.abs(user.running - dogs[i].running);
+    var difference = Math.abs(user.ratingRunning - dogs[i].ratingRunning);
     if (difference === 0) {
       dogs[i].totalMatches += 4;
     } else if (difference === 1) {
@@ -205,9 +205,9 @@ function compareRunning() {
   }
 }
 
-function compareSunBathing() {
+function compareratingSunbathing() {
   for (var i = 0; i < dogs.length; i++) {
-    var difference = Math.abs(user.sunBathing - dogs[i].sunBathing);
+    var difference = Math.abs(user.ratingSunbathing - dogs[i].ratingSunbathing);
     if (difference === 0) {
       dogs[i].totalMatches += 4;
     } else if (difference === 1) {
@@ -221,11 +221,11 @@ function compareSunBathing() {
 }
 
 function getNumericalMatches() {
-  compareSwimming();
-  compareFetch();
-  compareWalks();
-  compareRunning();
-  compareSunBathing();
+  compareratingSwimming();
+  compareratingFetch();
+  compareratingWalks();
+  compareratingRunning();
+  compareratingSunbathing();
 }
 
 // Put it all together, now!
