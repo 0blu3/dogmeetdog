@@ -1,5 +1,4 @@
 'use strict';
-
 var user = {
   ownerName: '',
   pupName: '',
@@ -20,6 +19,9 @@ var user = {
   ratingRunning: '',
   ratingSunbathing: '',
 };
+
+var selectNeighborhood = document.getElementById('neighborhood');
+var selected = selectNeighborhood.options[selectNeighborhood.selectedIndex].value;
 
 function getRadioNumericalValues(elementClass) {
   var radio = document.getElementsByClassName(elementClass);
@@ -60,5 +62,6 @@ function submit(event) {
   getRadioTextValues('prefFixed');
   localStorage.setItem('user', JSON.stringify(user));
 }
+
 var inputForm = document.getElementById('registration-form');
 inputForm.addEventListener('submit', submit);
