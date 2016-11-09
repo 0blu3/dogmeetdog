@@ -1,169 +1,38 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Dog Meet Dog - Home</title>
+  <title>Dog Meet Dog - Main</title>
   <link href="https://fonts.googleapis.com/css?family=Antic+Slab|Work+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Roboto" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css" media="screen" title="no title">
   <link rel="stylesheet" href="css/skeleton.css" media="screen" title="no title">
   <link rel="stylesheet" href="css/style.css" media="screen" title="no title">
-
 </head>
 <body>
   <div class="container">
     <header>
       <div id="dog" class="offset-by-one column one column">
-         </div>
-         <div id="logo" class="six columns add-bottom">
-            <h1>DOG MEET DOG</h1>
+      </div>
+      <div id="logo" class="six columns add-bottom">
+        <h1>DOG MEET DOG</h1>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <a href="index.html"><li class="active">Home</li></a>
+        <a href="main.html"><li>Main</li></a>
+        <a href="about-us.html"><li>About Us</li></a>
+        <a href="park-locations.html"><li>Park Locations</li></a>
+      </ul>
+    </nav>
+    <div id="splash-main" class="main twelve columns add-bottom">
+      <div class="twelve columns">
+        <div class="splash-banner">
+          <div class="register">
           </div>
-             </header>
-          <nav>
-            <ul>
-              <a href="index.html"><li class="active">Home</li></a>
-              <a href="main.html"><li>Main</li></a>
-              <a href="about-us.html"><li>About Us</li></a>
-              <a href="park-locations.html"><li>Park Locations</li></a>
-            </ul>
-          </nav>
-    <div class="main twelve columns add-bottom">
-
-      <div id="form">
-        <h3>Tell us a little about you and your furry friend.</h3>
-        <form id="registration-form">
-          <fieldset>
-            <label class="contactInput">Full Name:</label>
-            <input id="name"type="text"></input>
-
-            <label class="contactInput">Contact Number:</label>
-            <input id="contact_number"type="text"></input>
-
-            <label class="contactInput">Dog Name:</label>
-            <input id="pupName"type="text"></input>
-
-            <label class="contactInput">Breed:</label>
-            <input id="breed" type="text"></input>
-
-            <label class="radioLabel" id="gender">Gender:</label>
-            <label class="bulletOptions" for="female">Female</label>
-            <input id="female" type="radio" name="gender" value="female">
-
-            <label class="bulletOptions" for="male">Male</label>
-            <input id="male" type="radio" name="gender" value="male"><br>
-
-            <label class="ageInput">Dog age:</label>
-            <input id="age" type="text"></input>
-
-            <h3>Likes and Dislikes:</h3>
-            <p>Rate on a scale of one to five, one being dislikes A LOT, five being LOVES.</p>
-
-            <label class="radioLabel" for="swimming" id="swimming">Swimming</label>
-            <label class="bulletOptions" for="swimOptionOne">1</label>
-            <input class="radioBullet" id="swimOptionOne" type="radio" name="swimming" value="swimOptionOne">
-            <label class="bulletOptions" for="swimOptionTwo">2</label>
-            <input class="radioBullet" id="swimOptionTwo" type="radio" name="swimming" value="swimOptionTwo">
-            <label class="bulletOptions" for="swimOptionThree">3</label>
-            <input class="radioBullet" id="swimOptionThree" type="radio" name="swimming" value="swimOptionThree">
-            <label class="bulletOptions" for="swimOptionFour">4</label>
-            <input class="radioBullet" id="swimOptionFour" type="radio" name="swimming" value="swimOptionFour">
-            <label class="bulletOptions" for="swimOptionFive">5</label>
-            <input class="radioBullet" id="swimOptionFive" type="radio" name="swimming" value="swimOptionFive">
-
-            <label class="radioLabel" for="fetch" id="fetch">Fetch</label>
-            <label class="bulletOptions" for="fetchOptionOne" id>1</label>
-            <input class="radioBullet" id="fetchOptionOne" type="radio" name="fetch" value="fetchOptionOne">
-            <label class="bulletOptions" for="fetchOptionTwo">2</label>
-            <input class="radioBullet" id="fetchOptionTwo" type="radio" name="fetch" value="fetchOptionTwo">
-            <label class="bulletOptions" for="fetchOptionThree">3</label>
-            <input class="radioBullet" id="fetchOptionThree" type="radio" name="fetch" value="fetchOptionThree">
-            <label class="bulletOptions" for="fetchOptionFour">4</label>
-            <input class="radioBullet" id="fetchOptionFour" type="radio" name="fetch" value="fetchOptionFour">
-            <label class="bulletOptions" for="fetchOptionFive">5</label>
-            <input class="radioBullet" id="fetchOptionFive" type="radio" name="fetch" value="fetchOptionFive">
-
-            <label class="radioLabel" for="walks" id="walks">Walks</label>
-            <label class="bulletOptions" for="walkOptionOne">1</label>
-            <input class="radioBullet" id="walkOptionOne" type="radio" name="walks" value="walkOptionsOne">
-            <label class="bulletOptions" for="walkOptionTwo">2</label>
-            <input class="radioBullet" id="walkOptionTwo" type="radio" name="walks" value="walkOptionsTwo">
-            <label class="bulletOptions" for="walkOptionThree">3</label>
-            <input class="radioBullet" id="walkOptionThree" type="radio" name="walks" value="walkOptionsThree">
-            <label class="bulletOptions" for="walkOptionFour">4</label>
-            <input class="radioBullet" id="walkOptionFour" type="radio" name="walks" value="walkOptionsFour">
-            <label class="bulletOptions" for="walkOptionFive">5</label>
-            <input class="radioBullet" id="walkOptionFive" type="radio" name="walks" value="walkOptionsFive">
-
-            <label class="radioLabel" for="running" id="running">Partner Running</label>
-            <label class="bulletOptions" for="runningOptionOne">1</label>
-            <input class="radioBullet" id="runningOptionOne" type="radio" name="running" value="runningOptionOne">
-            <label class="bulletOptions" for="runningOptionTwo">2</label>
-            <input class="radioBullet" id="runningOptionTwo" type="radio" name="running" value="runningOptionTwo">
-            <label class="bulletOptions" for="runningOptionThree">3</label>
-            <input class="radioBullet" id="runningOptionThree" type="radio" name="running" value="runningOptionThree">
-            <label class="bulletOptions" for="runningOptionFour">4</label>
-            <input class="radioBullet" id="runningOptionFour" type="radio" name="running"values="runningOptionFour">
-            <label class="bulletOptions" for="runningOptionFive">5</label>
-            <input class="radioBullet" id="runningOptionFive" type="radio" name="running" value="runningOptionFive">
-
-            <label class="radioLabel" for="sunBathing" id="sunBathing">Sun Bathing</label>
-            <label class="bulletOptions" for="sunOptionOne">1</label>
-            <input class="radioBullet" id="sunOptionOne" type="radio" name="sunBathing" value="sunOptionOne">
-            <label class="bulletOptions" for="sunOptionTwo">2</label>
-            <input class="radioBullet" id="sunOptionTwo" type="radio" name="sunBathing" value="sunOptionTwo">
-            <label class="bulletOptions" for="sunOptionThree">3</label>
-            <input class="radioBullet" id="sunOptionThree" type="radio" name="sunBathing" value="sunOptionThree">
-            <label class="bulletOptions" for="sunOptionFour">4</label>
-            <input class="radioBullet" id="sunOptionFour" type="radio" name="sunBathing" value="sunOptionFour">
-            <label class="bulletOptions" for="sunOptionFive">5</label>
-            <input class="radioBullet" id="sunOptionFive" type="radio" name="sunBathing" value="sunOptionFive">
-
-            <h3>Playmate Preferences</h3>
-
-            <select name="neighborhood">
-            <option value="">Select Neighborhood</option>
-            <option value="capHill">Capitol Hill</option>
-            <option value="downtown">Downtown Seattle</option>
-            <option value="wSeattle">West Seattle</option>
-            <option value="ballard">Ballard</option>
-            <option value="qAnne">Queen Anne</option>
-            <option value="belltown">Belltown</option>
-            <option value="fremont">Fremont</option>
-            <option value="uDistrict">University District</option>
-            <option value="nSeattle">North Seattle</option>
-            <option value="gLake">Green Lake</option>
-            <option value="bHill">Beacon Hill</option>
-            <option value="sLakeUnion">South Lake Union</option>
-            <option value="other">Other</option></select>
-
-
-            <label class="radioLabel" for="agePref" id="agePref">Age Preference:</label>
-            <label class="bulletOptions" for="preferOlder">Prefer Older</label>
-            <input class="radioBullet" id="preferOlder" type="radio" name="agePref" value="preferOlder">
-            <label class="bulletOptions" for="preferYounger">Prefer Younger</label>
-            <input class="radioBullet" id="preferYounger" type="radio" name="agePref" value="preferYounger">
-            <label class="bulletOptions" for="aboutTheSame">About The Same</label>
-            <input class="radioBullet" id="aboutTheSame" type="radio" name="agePref" value="aboutTheSame">
-
-            <label class="radioLabel" for="spayNeuPref" id="spayNeuPref">Spay & Neutured Preferences:</label>
-            <label class="bulletOptions" for="prefFixed">Fixed</label>
-            <input class="radioBullet" id="prefFixed" type="radio" name="spayNeuPref" value="prefFixed">
-            <label class="bulletOptions" for="noPreference">No Preference</label>
-            <input class="radioBullet" id="noPreference" type="radio" name="spayNeuPref" value="noPreference">
-
-            <label class="radioLabel" for="prefSize" id="prefSize">Size:</label>
-            <label class="bulletOptions" for="small">Small</label>
-            <input class="radioBullet" id="small" type="radio" name="sizes" value="small">
-            <label class="bulletOptions" for="medium">Medium</label>
-            <input class="radioBullet" id="medium" type="radio" name="sizes" value="medium">
-            <label class="bulletOptions" for="large">Large</label>
-            <input class="radioBullet" id="large" type="radio" name="sizes" value="large">
-            <label class="bulletOptions" for="noPref">No Preference</label>
-            <input class-"radioBullet" id="noPref" type="radio" name="sizes" value="noPref">
-
-            <button class="button" type="submit">Submit</button>
-          </fieldset>
-        </form>
+          <p>Find a Furry Friend Today</p>
+        </div>
       </div>
     </div>
     <footer class="twelve columns">
@@ -173,9 +42,5 @@
     </footer>
   </div><!-- container -->
   <script src="js/app.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbRZ4NlKrU6pN5XM8OY8K1ttT7rc5czXM&callback=initMap"
-    async defer></script>
-  </script>
-  <script src="js/form.js"></script>
 </body>
 </html>
