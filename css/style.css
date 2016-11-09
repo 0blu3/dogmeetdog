@@ -133,7 +133,11 @@ h3 {
 	display: inline;
 	margin-right: 4px;
 }
+<<<<<<< HEAD
 /* Google map page */
+=======
+/** google maps **/
+>>>>>>> gmaps
 #parks-map {
 	height: 550px;
 	width: 100%;
