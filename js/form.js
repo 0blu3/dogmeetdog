@@ -1,7 +1,8 @@
-'use strict!';
+'use strict';
 
 function submit(event) {
   event.preventDefault();
+  console.log(event);
   var inputName = event.target.name.value;
   localStorage.setItem('name', name.value);
   console.log(inputName);
@@ -15,39 +16,63 @@ function submit(event) {
   localStorage.setItem('breed', breed.value);
   console.log(inputBreed);
 
-  var inputGender = document.getElementById('gender');
-  for (var i = 0; i < inputGender.length; i++) {
-    if(inputGender[i].checked) {
-      return inputGender[i].value;
-      console.log(inputGender);
-    }
+  var inputFemale = document.getElementById('female');
+  if(inputFemale.checked) {
+    inputFemale.value;
+    console.log(inputFemale);
   }
 
   var inputAge = event.target.age.value;
   localStorage.setItem('age', age.value);
-  console.log(age);
+  console.log(inputAge);
 
   var inputSwimming = document.getElementById('swimming');
-  for (var i = 0; i < inputSwimming.length; i++) {
-    inputSwimming[i].value;
+  if(inputSwimming.checked) {
+    inputSwimming.value;
     console.log(inputSwimming);
   }
-  var inputFetch = document.getElementById('fetch').value;
-  localStorage.setItem('fetch', fetch.value);
-  var inputWalks = document.getElementById('walks').value;
-  localStorage.setItem('walks', walks.input);
-  var inputRunning = document.getElementById('running').value;
-  localStorage.setItem('running', running.value);
-  var inputSunBathing = document.getElementById('sunBathing').value;
-  localStorage.setItem('sunBathing', sunBathing.value);
-  var inputNeighborhood = document.getElementById('neighborhood').value;
-  localStorage.setItem('neighborhood', neighborhood.value);
-  var inputagePref = document.getElementById('agePref').value;
-  localStorage.setItem('agePref', agePref.value);
-  var inputSpayNeuPref = document.getElementById('spayNeuPref').value;
-  localStorage.setItem('spayNeuPref', spayNeuPref.value);
-  var inputSize = document.getElementById('sizes').value;
-  localStorage.setItem('sizes', sizes.value);
+
+  var inputFetch = document.getElementById('fetch');
+  if(inputFetch.checked) {
+    inputSwimming.value;
+    console.log(inputFetch);
+  }
+
+  var inputWalks = document.getElementById('walks');
+  if(inputWalks.checked) {
+    inputWalks.value;
+    console.log(inputWalks);
+  }
+
+  var inputRunning = document.getElementById('running');
+  if(inputRunning.checked) {
+    inputSwimming.value;
+    console.log(inputRunning);
+  }
+
+  var inputSunBathing = document.getElementById('sunBathing');
+  if(inputSunBathing.checked) {
+    inputSunBathing.value;
+    console.log(inputSunBathing);
+  }
+
+  var inputAgePref = document.getElementById('agePref');
+  if(inputAgePref.checked) {
+    inputAgePref.value;
+    console.log(inputAgePref);
+  }
+
+  var inputSpayNeuPref = document.getElementById('spayNeuPref');
+  if(inputSpayNeuPref.checked) {
+    inputSpayNeuPref.value;
+    console.log(inputSpayNeuPref);
+  }
+
+  var inputPrefSize = document.getElementById('prefSize');
+  if(inputPrefSize.checked) {
+    inputPrefSize.value;
+    console.log(inputPrefSize);
+  }
 }
-var inputForm = document.querySelectorAll('form');
-form.addEventListener('submit', submit);
+var inputForm = document.getElementById('registration-form');
+inputForm.addEventListener('submit', submit);
