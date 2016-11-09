@@ -165,6 +165,7 @@ input:hover {
 .matches-slides {
 	position: relative;
 	display: block;
+	overflow: hidden;
 }
 
 .matches-slides figure {

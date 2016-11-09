@@ -1,4 +1,4 @@
-'use strict';
+
 
 // var totalMatches = 0;
 // var highestMatches = [];
@@ -43,12 +43,12 @@ var makeSlideShow = function (el, options) {
 }
 
 var opts = {
-  swipe: true;
+  swipe: true
 };
 
 makeSlideShow('.slider', opts);
 
-initialization: function(el, options) {
+var init = function (el, options) {
   this.counter = 0;
   // keeps track of current match
 
@@ -83,7 +83,7 @@ initialization: function(el, options) {
   }
 }
 
-showcurrent: function(i) {
+showcurrent = function(i) {
   if(i > 0) {
     this.counter = (this.counter + 1 === this.numItems) ? 0: this.counter +1;
   } else {
@@ -95,7 +95,7 @@ showcurrent: function(i) {
   this.$items[this.counter].classList.add('matches-show');
 }
 
-injectControls: function(el) {
+injectControls = function(el) {
   var spanPrev = document.createElement('span'),
       spanNext = document.createElement('span'),
       docFrag = document.createDocumentFragment();
@@ -115,12 +115,12 @@ injectControls: function(el) {
 
 }
 
-addEventListeners: function(el) {
+addEventListeners = function(el) {
   var that = this;
 
   el.querySelector('.matches-next').addEventListener('click', function() {
     that.showCurrent(1);
-  } false);
+  }, false );
 
   el.querySelector('.matches-prev').addEventListener('click', function() {
     that.showcurrent(-1);
@@ -138,7 +138,7 @@ addEventListeners: function(el) {
 }
 
 
-addSwipe: function(el) {
+addSwipe = function(el) {
   var that = this,
         ht = new Hammer(el);
 
