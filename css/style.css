@@ -313,7 +313,7 @@ h3.parkLocation {
 
 #splash-main {
 	box-sizing: border-box;
-	width: 880px;
+	width: 100%;
 	background-image: url("../Assets/images/marketing-assets/splash1_resized.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
