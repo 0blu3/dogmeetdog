@@ -6,7 +6,7 @@ var registerButton = document.getElementsByClassName('register')[0];
 var newAnchor = document.createElement('a');
 var newText = document.createElement('p');
 if (!localStorage.user) {
-  newAnchor.setAttribute('href', 'register.html');
+  newAnchor.setAttribute('href', 'registration.html');
   registerButton.appendChild(newAnchor);
   newText.innerHTML = 'Click Here To Start';
   newAnchor.appendChild(newText);
@@ -16,7 +16,6 @@ if (!localStorage.user) {
   newText.innerHTML = 'Welcome Back';
   newAnchor.appendChild(newText);
 }
-
 
 // ***CONSTRUCTOR FUNCTION AND DUMMY ACCOUNTS***
 var user = JSON.parse(localStorage['user']);
