@@ -130,6 +130,7 @@ h3 {
 	display: inline;
 	margin-right: 4px;
 }
+/** google maps **/
 #parks-map {
 	height: 550px;
 	width: 100%;
