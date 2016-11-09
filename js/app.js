@@ -1,7 +1,25 @@
 'use strict';
 
-// ***CONSTRUCTOR FUNCTION AND DUMMY ACCOUNTS***
+//***DETERMINES SPLASH PAGE BUTTON***
 
+var registerButton = document.getElementsByClassName('register')[0];
+var newAnchor = document.createElement('a');
+var newText = document.createElement('p');
+if (!localStorage.user) {
+  newAnchor.setAttribute('href', 'register.html');
+  registerButton.appendChild(newAnchor);
+  newText.innerHTML = 'Click Here To Start';
+  newAnchor.appendChild(newText);
+} else {
+  newAnchor.setAttribute('href', 'results.html');
+  registerButton.appendChild(newAnchor);
+  newText.innerHTML = 'Welcome Back';
+  newAnchor.appendChild(newText);
+}
+
+
+// ***CONSTRUCTOR FUNCTION AND DUMMY ACCOUNTS***
+var user = JSON.parse(localStorage['user']);
 var dogs = []; // Dummy profiles are pushed here.
 
 // Pre-populating some arrays with options to pull from for filling out the profile form so that it matches the options used in the dummy profiles.
@@ -59,23 +77,6 @@ new Dog('Boss', 'Golden Retriever', 'Large', 5, 'Male', true, 'Belltown', 'No Pr
 new Dog('Maggie', 'Golden Doodle', 'Large', 7, 'Female', true, 'Ballard', 'No Preference', 'Medium', 'Female', 'Fixed', 5, 5, 4, 5, 3, 'maggie.jpg');
 
 // ***CODE THAT RUNS THE MATCHING***
-
-// Dummy user input
-// var user = {
-//   size: 'Large',
-//   age: '4',
-//   sex: 'Male',
-//   fixed: true,
-//   neighborhood: 'Capitol Hill',
-//   prefAge: 'About the same',
-//   prefSex: 'No Preference',
-//   prefFixed: 'Fixed',
-//   ratingSwimming: 5,
-//   ratingFetch: 4,
-//   ratingWalks: 3,
-//   ratingRunning: 2,
-//   ratingSunbathing: 1
-// };
 
 // This part calculates how much a dog matches the user non-numerical values
 function matchNeighborhood() {

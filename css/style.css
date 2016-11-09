@@ -310,3 +310,47 @@ h3.parkLocation {
     transform: rotateX(0deg);
   }
 }
+
+#splash-main {
+	box-sizing: border-box;
+	width: 880px;
+	background-image: url("../Assets/images/marketing-assets/splash1_resized.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	padding: 0;
+}
+
+.splash-banner {
+	width: 100%;
+	/*margin-top: 300px;*/
+	color: white;
+}
+
+.splash-banner p {
+	font-family: "Fascinate Inline";
+	font-size: 32px;
+	text-align: center;
+	text-shadow: 2px 2px #000000;
+}
+
+.register {
+	width: 300px;
+	height: 50px;
+	border-radius: 25px;
+	margin: 0 auto;
+	display: block;
+	margin-top: 200px;
+	margin-bottom: 50px;
+	background-color: rgba(255,255,255, .5);
+}
+
+.register p {
+	color: #1EAEDB;
+	font-family: "Roboto";
+	text-shadow: 0px 0px;
+}
+
+.register a {
+	text-decoration: none
+}
