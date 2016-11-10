@@ -1,8 +1,8 @@
 
 var makeSlideShow = function (el, options) {
-  var $slider = document.querySelectorAll(el),
+  var $slideshows = document.querySelectorAll(el),
 
-  $slider = {},
+  var $slideshows = {},
 
   Slideshow = {
     init: function (el, options) {
@@ -66,8 +66,17 @@ var makeSlideShow = function (el, options) {
       el.querySelector('matches.prev').addEventListener('click', function() {
         that.showCurrent(-1);
       }, false);
-    }
-  };
+
+      el.onkeydown = function(e) {
+        e = e || window.event;
+        if (e.keyCode === 37) {
+          that.showCurrent(-1);
+        } else if (e.keyCode === 39) {
+          that.showCurrent(1);
+        }
+      };
+    },
+
   addSwipe: function(el){
     var that = this,
     var ht = new Hammer(el);
