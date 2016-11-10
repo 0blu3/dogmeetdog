@@ -1,7 +1,5 @@
 'use strict';
 
-//***DETERMINES SPLASH PAGE BUTTON***
-
 var registerButton = document.getElementsByClassName('register')[0];
 var newAnchor = document.createElement('a');
 var newText = document.createElement('p');
