@@ -245,24 +245,25 @@ function sendToLocalStorage() {
   localStorage.setItem('dogs', JSON.stringify(dogs));
 }
 
-function verifyForm(event){
-  event.preventDefault();
-  console.log(verifyForm);
+function verifyForm(){
   document.getElementById('registration-form');
   var inputData = document.getElementsByTagName('input');
   for (var i = 0; i < inputData.length; i++) {
-    if (inputData.value == 'null') {
+    if (inputData[i].value === null) {
       alert('*Required fields missing information');
-      // document.getElementsByTagName('input').style.borderColor = 'red';
-    }else {
-      submit();
-    }
+      // inputData.style.backgroundColor = 'red';
+      return false;
+    }console.log(inputData.value);
   }
+  return true;
 };
-verifyForm();
 
 function submit(event) {
   event.preventDefault();
+  var formValid = verifyForm();
+  if (formValid === false) {
+    return;
+  }
   user.ownerName = event.target.name.value;
   user.pupName = event.target.pupName.value;
   user.breed = event.target.breed.value;
@@ -280,7 +281,7 @@ function submit(event) {
   localStorage.setItem('user', JSON.stringify(user));
   calculatePercentMatch();
   sendToLocalStorage();
-  location.href = 'results.html';
+  // location.href = 'results.html';
 };
 
 var inputForm = document.getElementById('registration-form');
