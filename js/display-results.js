@@ -1,6 +1,7 @@
 'use strict';
 
 // Taking match results from previous page
+var user = JSON.parse(localStorage['user']);
 var rankedDogs = JSON.parse(localStorage['dogs']);
 var topDogs = 3;
 

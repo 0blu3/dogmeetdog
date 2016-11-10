@@ -1,94 +1,152 @@
-var makeBSS = function (el, options) {
-    var $slideshows = document.querySelectorAll(el), // a collection of all of the slideshow
-        $slideshow = {},
-        Slideshow = {
-            init: function (el, options) {
-                this.counter = 0; // to keep track of current slide
-                this.el = el; // current slideshow container
-                this.$items = el.querySelectorAll('figure'); // a collection of all of the slides, caching for performance
-                this.numItems = this.$items.length; // total number of slides
-                options = options || {}; // if options object not passed in, then set to empty object
-                options.auto = options.auto || false; // if options.auto object not passed in, then set to false
-                this.opts = {
-                    swipe: (typeof options.swipe === "undefined") ? false : options.swipe
-                };
-
-                this.$items[0].classList.add('bss-show'); // add show class to first figure
-                this.injectControls(el);
-                this.addEventListeners(el);
-                if (this.opts.auto) {
-                    this.autoCycle(this.el, this.opts.speed, this.opts.pauseOnHover);
-                }
-                if (this.opts.fullScreen) {
-                    this.addFullScreen(this.el);
-                }
-                if (this.opts.swipe) {
-                    this.addSwipe(this.el);
-                }
-            },
-            showCurrent: function (i) {
-                // increment or decrement this.counter depending on whether i === 1 or i === -1
-                if (i > 0) {
-                    this.counter = (this.counter + 1 === this.numItems) ? 0 : this.counter + 1;
-                } else {
-                    this.counter = (this.counter - 1 < 0) ? this.numItems - 1 : this.counter - 1;
-                }
-
-                // remove .show from whichever element currently has it
-                // http://stackoverflow.com/a/16053538/2006057
-                [].forEach.call(this.$items, function (el) {
-                    el.classList.remove('bss-show');
-                });
-
-                // add .show to the one item that's supposed to have it
-                this.$items[this.counter].classList.add('bss-show');
-            },
-            injectControls: function (el) {
-            // build and inject prev/next controls
-                // first create all the new elements
-                var spanPrev = document.createElement("span"),
-                    spanNext = document.createElement("span"),
-                    docFrag = document.createDocumentFragment();
-
-                // add classes
-                spanPrev.classList.add('match-prev');
-                spanNext.classList.add('match-next');
-
-                // add contents
-                spanPrev.innerHTML = '&laquo;';
-                spanNext.innerHTML = '&raquo;';
-
-                // append elements to fragment, then append fragment to DOM
-                docFrag.appendChild(spanPrev);
-                docFrag.appendChild(spanNext);
-                el.appendChild(docFrag);
-            },
-            addEventListeners: function (el) {
-                var that = this;
-                el.querySelector('.match-next').addEventListener('click', function () {
-                    that.showCurrent(1); // increment & show
-                }, false);
-
-                el.querySelector('.match-prev').addEventListener('click', function () {
-                    that.showCurrent(-1); // decrement & show
-                }, false);
-
-                el.onkeydown = function (e) {
-                    e = e || window.event;
-                    if (e.keyCode === 37) {
-                        that.showCurrent(-1); // decrement & show
-                    } else if (e.keyCode === 39) {
-                        that.showCurrent(1); // increment & show
-                    }
-                };
-            },
 
 
-        }; // end Slideshow object .....
+// var totalMatches = 0;
+// var highestMatches = [];
+//
+//
+//
+// function ShowHighPercentageMatches(){
+//   if (Dog.matchPercentage > 70) {
+//
+//   }
+// }
+//
+// for (var i = 0; i < 3; i++){
+//   var currentMatches = highestMatches[i];
+//
+//
+//
+//   var htmlImageId = 'highestMatch' + i;
+// }
 
-    // make instances of Slideshow as needed
-    [].forEach.call($slideshows, function (el) {
-        $slideshow = Object.create(Slideshow);
-        $slideshow.init(el, options);
-    });
+
+var makeSlideShow = function (el, options) {
+  var $slider = document.querySelectorAll(el),
+
+  $slider = {},
+
+  Slideshow = {
+    init: function (el, options) {
+      // initialization goes here
+    },
+    showCurrent: function (i) {
+      // this will show current match and hide the rest
+    },
+    injectControls: function (el) {
+      // add previous and next buttons to the Slideshow
+      // swiping function will go here if we get fancy
+    },
+    addEventListeners: function (el) {
+      // add event listeners to prev/next buttons, arrow keys
+    },
+  };
+}
+
+var opts = {
+  swipe: true
 };
+
+makeSlideShow('.slider', opts);
+
+var init = function (el, options) {
+  this.counter = 0;
+  // keeps track of current match
+
+  this.el = el;
+  // current slideshow container
+  // create this as a property on the current objects
+
+  this.$items = el.querySelectorAll('figure');
+  // a collection of all the individual slides
+
+  this.numItems = this.$items.length;
+  // the total number of slides
+
+  options = options || {};
+  // if options object not passed in, then set to empty object [1]
+
+  options.auto = options.auto || false;
+
+  this.opts = {
+    swipe: (typeof options.swipe === "undefined") ? false: options.swipe
+  };
+
+  this.$items[0].classList.add('matches-show');
+  // add 'matches' class to first figure so that the first slide is visible when the slideshow loads
+
+  this.injectControls(el);
+
+  this.addEventListeners(el);
+
+  if(this.opts.swipe) {
+    this.addSwipe(this.el);
+  }
+}
+
+showcurrent = function(i) {
+  if(i > 0) {
+    this.counter = (this.counter + 1 === this.numItems) ? 0: this.counter +1;
+  } else {
+    this.counter = (this.counter - 1 < 0) ? this.numItems -1: this.counter -1;
+  }
+  [].forEach.call(this.$items, function(el) {
+    el.classList.remove('matches-show');
+  });
+  this.$items[this.counter].classList.add('matches-show');
+}
+
+injectControls = function(el) {
+  var spanPrev = document.createElement('span'),
+      spanNext = document.createElement('span'),
+      docFrag = document.createDocumentFragment();
+  // build/inject swiping controls
+
+  spanPrev.classList.add('matches-prev');
+  spanNext.classList.add('matches-next');
+  // adds classes
+
+  spanPrev.innerHTML = '&laquo;';
+  spanNext.innerHTML = '&raquo;';
+  // adds contents
+
+  docFrag.appendChild(spanPrev);
+  docFrag.appendChild(spanNext);
+  el.appendChild(docFrag);
+
+}
+
+addEventListeners = function(el) {
+  var that = this;
+
+  el.querySelector('.matches-next').addEventListener('click', function() {
+    that.showCurrent(1);
+  }, false );
+
+  el.querySelector('.matches-prev').addEventListener('click', function() {
+    that.showcurrent(-1);
+  }, false);
+
+  el.onkeydown = function (e) {
+    e = e || window.event;
+
+    if (e.keyCode === 37) {
+      that.showCurrent(-1);
+    } else if (e.keyCode === 39) {
+      that.showCurrent(1);
+    }
+  };
+}
+
+
+addSwipe = function(el) {
+  var that = this,
+        ht = new Hammer(el);
+
+  ht.on('swiperight', function(e) {
+    that.showCurrent(-1);
+  });
+
+  ht.on('swipeLeft', function(e) {
+    that.showCurrent(1);
+  });
+}

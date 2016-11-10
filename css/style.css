@@ -133,6 +133,25 @@ h3 {
 	display: inline;
 	margin-right: 4px;
 }
+
+/*.formButton {
+	background-color: #b1abd2;
+}*/
+
+input:hover {
+	background-color: #b1abd2;
+}
+
+submit:hover {
+	background-color: #b1abd2
+}
+
+button {
+	background: #b1abd2;
+	width: 100px;
+	margin-left: 200px;
+}
+
 /** google maps **/
 #parks-map {
 	height: 550px;
@@ -151,6 +170,7 @@ h3.parkLocation {
 .no-list-style {
 	list-style-type: none;
 }
+<<<<<<< HEAD
 button {
 	background: #b1abd2;
 	width: 100px;
@@ -223,6 +243,8 @@ matches-prev{
 }
 /*END OF SLIDER*/
 
+=======
+>>>>>>> f4455421a80830a5912caa28c32515d35885a429
 /* accordian on park page */
 
 #park-info.transition, #park-info p, #park-info ul li i:before, #park-info ul li i:after {
@@ -366,7 +388,7 @@ matches-prev{
 
 #splash-main {
 	box-sizing: border-box;
-	width: 880px;
+	width: 100%;
 	background-image: url("../Assets/images/marketing-assets/splash1_resized.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
@@ -407,3 +429,68 @@ matches-prev{
 .register a {
 	text-decoration: none
 }
+<<<<<<< HEAD
+=======
+
+/** SLIDER **/
+
+.matches-slides {
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+
+.matches-slides figure {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.matches-slides figure: first-child {
+	position: relative;
+}
+
+.matches-slides figure img {
+	opacity: 0;
+	transition: opacity 1.2s;
+}
+
+.matches-slides, .matches-show img {
+	opacity: 1;
+}
+
+.matches-slides figcaption {
+	position: absolute;
+	bottom: .75em;
+	right: .35em;
+	opacity: 0;
+	transition: opacity 1.2s;
+}
+
+.matches-slides, .matches-show figcaption {
+	z-index: 2;
+	opacity: 1;
+}
+
+.matches-next, .bss-prev {
+	position: abolsute;
+	top: 50%;
+	z-index: 1;
+	opacity: .5;
+	user-select: none;
+}
+
+.matches-next:hover, .matches-prev:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+
+.matches-next {
+	right: 0;
+}
+
+matches-prev{
+	left: 0;
+}
+/*END OF SLIDER*/
+>>>>>>> f4455421a80830a5912caa28c32515d35885a429
