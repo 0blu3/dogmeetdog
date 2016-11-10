@@ -9,7 +9,7 @@ var makeSlideShow = function (el, options) {
       // initialization goes here
       this.counter = 0;
       this.el = el;
-      this.$itiems = el.querySelectorAll('figure');
+      this.$items = el.querySelectorAll('figure');
       this.numItems = this.$items.length;
       options = options || false;
       options.auto = options.auto || false;
