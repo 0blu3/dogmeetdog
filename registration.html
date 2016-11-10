@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Dog Meet Dog - Registration</title>
+  <link href="https://fonts.googleapis.com/css?family=Antic+Slab|Work+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css" media="screen" title="no title">
+  <link rel="stylesheet" href="css/skeleton.css" media="screen" title="no title">
+  <link rel="stylesheet" href="css/style.css" media="screen" title="no title">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div id="dog" class="offset-by-one column one column">
+      </div>
+      <div id="logo" class="six columns add-bottom">
+        <h1>DOG MEET DOG</h1>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <a href="index.html"><li>Home</li></a>
+        <a href="about-us.html"><li>About Us</li></a>
+        <a href="park-locations.html"><li>Park Locations</li></a>
+      </ul>
+    </nav>
+    <div class="main twelve columns add-bottom">
+
+      <div id="form">
+        <h3>Tell us a little about you and your furry friend.</h3>
+        <form id="registration-form">
+          <fieldset>
+            <label class="contactInput">Full Name:</label>
+            <input id="name"type="text"></input>
+
+            <label class="contactInput">Dog Name:</label>
+            <input id="pupName"type="text"></input>
+
+            <label class="contactInput">Breed:</label>
+            <input id="breed" type="text"></input>
+
+            <label class="radioLabel" id="gender">Gender:</label>
+
+            <label class="bulletOptions" for="female">Female</label>
+            <input class="radioBullet" id="female" type="radio" name="gender" value="female">
+
+            <label class="bulletOptions" for="male">Male</label>
+            <input class="radioBullet" id="male" type="radio" name="gender" value="male"><br>
+
+            <label class="ageInput">Dog age:</label>
+            <input id="age" type="text"></input>
+
+            <h3>Likes and Dislikes:</h3>
+            <p>Rate on a scale of one to five, one being dislikes A LOT, five being LOVES.</p>
+
+            <label class="radioLabel" for="swimming" id="swimming">Swimming</label>
+            <label class="bulletOptions" for="swimOptionOne">1</label>
+            <input class="radioBullet ratingSwimming" id="swimOptionOne" type="radio" name="swimming" value="1">
+            <label class="bulletOptions" for="swimOptionTwo">2</label>
+            <input class="radioBullet ratingSwimming" id="swimOptionTwo" type="radio" name="swimming" value="2">
+            <label class="bulletOptions" for="swimOptionThree">3</label>
+            <input class="radioBullet ratingSwimming" id="swimOptionThree" type="radio" name="swimming" value="3">
+            <label class="bulletOptions" for="swimOptionFour">4</label>
+            <input class="radioBullet ratingSwimming" id="swimOptionFour" type="radio" name="swimming" value="4">
+            <label class="bulletOptions" for="swimOptionFive">5</label>
+            <input class="radioBullet ratingSwimming" id="swimOptionFive" type="radio" name="swimming" value="5">
+
+            <label class="radioLabel" for="fetch" id="fetch">Fetch</label>
+            <label class="bulletOptions" for="fetchOptionOne" id>1</label>
+            <input class="radioBullet ratingFetch" id="fetchOptionOne" type="radio" name="fetch" value="1">
+            <label class="bulletOptions" for="fetchOptionTwo">2</label>
+            <input class="radioBullet ratingFetch" id="fetchOptionTwo" type="radio" name="fetch" value="2">
+            <label class="bulletOptions" for="fetchOptionThree">3</label>
+            <input class="radioBullet ratingFetch" id="fetchOptionThree" type="radio" name="fetch" value="3">
+            <label class="bulletOptions" for="fetchOptionFour">4</label>
+            <input class="radioBullet ratingFetch" id="fetchOptionFour" type="radio" name="fetch" value="4">
+            <label class="bulletOptions" for="fetchOptionFive">5</label>
+            <input class="radioBullet ratingFetch" id="fetchOptionFive" type="radio" name="fetch" value="5">
+
+            <label class="radioLabel" for="walks" id="walks">Walks</label>
+            <label class="bulletOptions" for="walkOptionOne">1</label>
+            <input class="radioBullet ratingWalks" id="walkOptionOne" type="radio" name="walks" value="1">
+            <label class="bulletOptions" for="walkOptionTwo">2</label>
+            <input class="radioBullet ratingWalks" id="walkOptionTwo" type="radio" name="walks" value="2">
+            <label class="bulletOptions" for="walkOptionThree">3</label>
+            <input class="radioBullet ratingWalks" id="walkOptionThree" type="radio" name="walks" value="3">
+            <label class="bulletOptions" for="walkOptionFour">4</label>
+            <input class="radioBullet ratingWalks" id="walkOptionFour" type="radio" name="walks" value="4">
+            <label class="bulletOptions" for="walkOptionFive">5</label>
+            <input class="radioBullet ratingWalks" id="walkOptionFive" type="radio" name="walks" value="5">
+
+            <label class="radioLabel" for="running" id="running">Partner Running</label>
+            <label class="bulletOptions" for="runningOptionOne">1</label>
+            <input class="radioBullet ratingRunning" id="runningOptionOne" type="radio" name="running" value="1">
+            <label class="bulletOptions" for="runningOptionTwo">2</label>
+            <input class="radioBullet ratingRunning" id="runningOptionTwo" type="radio" name="running" value="2">
+            <label class="bulletOptions" for="runningOptionThree">3</label>
+            <input class="radioBullet ratingRunning" id="runningOptionThree" type="radio" name="running" value="3">
+            <label class="bulletOptions" for="runningOptionFour">4</label>
+            <input class="radioBullet ratingRunning" id="runningOptionFour" type="radio" name="running" value="4">
+            <label class="bulletOptions" for="runningOptionFive">5</label>
+            <input class="radioBullet ratingRunning" id="runningOptionFive" type="radio" name="running" value="5">
+
+            <label class="radioLabel" for="sunBathing" id="sunBathing">Sun Bathing</label>
+            <label class="bulletOptions" for="sunOptionOne">1</label>
+            <input class="radioBullet ratingSunbathing" id="sunOptionOne" type="radio" name="sunBathing" value="1">
+            <label class="bulletOptions" for="sunOptionTwo">2</label>
+            <input class="radioBullet ratingSunbathing" id="sunOptionTwo" type="radio" name="sunBathing" value="2">
+            <label class="bulletOptions" for="sunOptionThree">3</label>
+            <input class="radioBullet ratingSunbathing" id="sunOptionThree" type="radio" name="sunBathing" value="3">
+            <label class="bulletOptions" for="sunOptionFour">4</label>
+            <input class="radioBullet ratingSunbathing" id="sunOptionFour" type="radio" name="sunBathing" value="4">
+            <label class="bulletOptions" for="sunOptionFive">5</label>
+            <input class="radioBullet ratingSunbathing" id="sunOptionFive" type="radio" name="sunBathing" value="5">
+
+            <h3>Playmate Preferences</h3>
+
+            <select id="neighborhood" name="neighborhood">
+            <option>Select Neighborhood</option>
+            <option value="capHill">Capitol Hill</option>
+            <option value="downtown">Downtown Seattle</option>
+            <option value="wSeattle">West Seattle</option>
+            <option value="ballard">Ballard</option>
+            <option value="qAnne">Queen Anne</option>
+            <option value="belltown">Belltown</option>
+            <option value="fremont">Fremont</option>
+            <option value="uDistrict">University District</option>
+            <option value="nSeattle">North Seattle</option>
+            <option value="gLake">Green Lake</option>
+            <option value="bHill">Beacon Hill</option>
+            <option value="sLakeUnion">South Lake Union</option>
+            <option value="other">Other</option></select>
+
+            <label class="radioLabel" id="age-preference">Age Preference:</label>
+            <label class="bulletOptions" for="preferOlder">Prefer Older</label>
+            <input class="radioBullet prefAge" type="radio" value="Older">
+            <label class="bulletOptions" for="preferYounger">Prefer Younger</label>
+            <input class="radioBullet prefAge" type="radio" value="Younger">
+            <label class="bulletOptions" for="aboutTheSame">About The Same</label>
+            <input class="radioBullet prefAge" type="radio" value="About the same">
+
+            <label class="radioLabel" id="age-preference">Spay & Nueter Status Preference:</label>
+            <label class="bulletOptions" for="fixed">Fixed</label>
+            <input class="radioBullet prefFixed" type="radio" value="Fixed">
+            <label class="bulletOptions" for="noPref">No Preference</label>
+            <input class="radioBullet prefFixed" type="radio" value="No Preference">
+
+            <label class="radioLabel" id="size-preference">Size Preference:</label>
+            <label class="bulletOptions" for="preferSmall">Small</label>
+            <input class="radioBullet prefSize" type="radio" value="Small">
+            <label class="bulletOptions" for="preferMedium">Medium</label>
+            <input class="radioBullet prefSize" type="radio" value="Medium">
+            <label class="bulletOptions" for="preferLarge">Large</label>
+            <input class="radioBullet prefSize" type="radio" value="Large">
+            <label class="bulletOptions" for="no-preference">No Preference</label>
+            <input class="radioBullet prefSize" type="radio" value="No Preference">
+
+            <button id="submit-button" class="formButton" type="submit">Submit</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <footer class="twelve columns">
+      <ul>
+        <li class="grey copyright center"> &copy; Copyright 2016 DogMeetDog</li>
+      </ul>
+    </footer>
+  </div><!-- container -->
+  </script>
+  <script src="js/app.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>
