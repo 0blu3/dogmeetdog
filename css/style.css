@@ -342,13 +342,23 @@ h3.parkLocation {
 	display: block;
 	margin-top: 200px;
 	margin-bottom: 50px;
-	background-color: rgba(255,255,255, .5);
+	background-color: rgba(255,255,255,.5);
+}
+
+.register:hover {
+	background-color: rgba(30,174,219,.5);
+	transition: all 0.25s ease;
 }
 
 .register p {
 	color: #1EAEDB;
 	font-family: "Roboto";
 	text-shadow: 0px 0px;
+}
+
+.register p:hover {
+	color: white;
+	transition: all 0.25s ease;
 }
 
 .register a {
