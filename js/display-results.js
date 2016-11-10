@@ -72,6 +72,5 @@ displayResults();
 
 var imgTags = document.getElementsByClassName('clickable');
 for (var i = 0; i < imgTags.length; i++) {
-  console.log('hi there');
   imgTags[i].addEventListener('click', getClickedArrayIndex);
 }
