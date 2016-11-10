@@ -15,7 +15,6 @@ var makeNewElement = function(elementTag, elementContent, target, cssClass){
   target.appendChild(newEl);
 };
 
-// DUPLICATED CODE FROM DISPLAY-RESULTS.JS
 function makeNewImage(src, parent, childId, cssClass) {
   var parent = document.getElementById(parent);
   var newImg = document.createElement('img');
@@ -24,7 +23,6 @@ function makeNewImage(src, parent, childId, cssClass) {
   newImg.setAttribute('class', cssClass);
   parent.appendChild(newImg);
 }
-// DUPLICATED CODE FROM DISPLAY-RESULTS.JS
 
 function initiateTable(parent, childId) {
   var parent = document.getElementById(parent);

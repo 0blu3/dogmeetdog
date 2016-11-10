@@ -1,11 +1,9 @@
 'use strict';
 
-// Taking match results from previous page
 var user = JSON.parse(localStorage['user']);
 var rankedDogs = JSON.parse(localStorage['dogs']);
 var topDogs = 3;
 
-// General function to make new HTML elements
 function makeNewContainingElement(tag, innerText, parent, childId, cssClass) {
   var parent = document.getElementById(parent);
   var newEl = document.createElement(tag);
@@ -32,7 +30,6 @@ function makeNewImage(src, parent, childId, cssClass) {
   parent.appendChild(newImg);
 }
 
-// Renders the HTML of the profiles from the objects in the array
 function makeProfileBoxes() {
   for (var i = 0; i < topDogs; i++) {
     makeNewContainingElement('div', '', 'results', rankedDogs[i].name, 'profile-box');
@@ -46,7 +43,6 @@ function makeProfileBoxes() {
   }
 }
 
-// Color codes the quality of the match.
 function percentageColor() {
   for (var i = 0; i < 3; i++) {
     var percentText = document.getElementById(rankedDogs[i].name + '-percent-text');
@@ -62,20 +58,16 @@ function percentageColor() {
   }
 }
 
-// Event listener for capturing which picture gets clicked on and passed to the profile page.
-
 function getClickedArrayIndex(event) {
   var profileClick = event.target.id;
   localStorage.setItem('profileClick', JSON.stringify(profileClick));
 }
 
-// The function that does everying at once.
 function displayResults() {
   makeProfileBoxes();
   percentageColor();
 }
 
-// Render page and add event listeners
 displayResults();
 
 var imgTags = document.getElementsByClassName('clickable');
