@@ -245,9 +245,21 @@ function sendToLocalStorage() {
   localStorage.setItem('dogs', JSON.stringify(dogs));
 }
 
-document.getElementById('submit-button').onclick = function() {
-  location.href = 'results.html';
+function verifyForm(event){
+  event.preventDefault();
+  console.log(verifyForm);
+  document.getElementById('registration-form');
+  var inputData = document.getElementsByTagName('input');
+  for (var i = 0; i < inputData.length; i++) {
+    if (inputData.value == 'null') {
+      alert('*Required fields missing information');
+      // document.getElementsByTagName('input').style.borderColor = 'red';
+    }else {
+      submit();
+    }
+  }
 };
+verifyForm();
 
 function submit(event) {
   event.preventDefault();
@@ -268,7 +280,8 @@ function submit(event) {
   localStorage.setItem('user', JSON.stringify(user));
   calculatePercentMatch();
   sendToLocalStorage();
-}
+  location.href = 'results.html';
+};
 
 var inputForm = document.getElementById('registration-form');
 inputForm.addEventListener('submit', submit);
