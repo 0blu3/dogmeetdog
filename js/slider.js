@@ -1,28 +1,28 @@
 
 var makeSlideShow = function (el, options) {
-  var $slideshows = document.querySelectorAll(el),
+  var $slideshows = document.getElementById('results'),
 
-  var $slideshows = {},
+  $slideshows = {},
 
   Slideshow = {
     init: function (el, options) {
       // initialization goes here
       this.counter = 0;
       this.el = el;
-      this.$items = el.querySelectorAll('figure');
-      this.numItems = this.$items.length;
+      this.$items = el.getElementById('results');
+      this.numItems = topDogs;
       options = options || false;
       options.auto = options.auto || false;
-      this.opts = {
-        swipe: (typeof options.swipe === "undefined" ? false: options.swipe)
-      };
+      // this.opts = {
+      //   swipe: (typeof options.swipe === "undefined" ? false: options.swipe)
+      // };
 
       this.$items[0].classList.add('matches-show');
       this.injectControls(el);
       this.addEventListeners(el);
-      if (this.opts.swipe) {
-        this.addSwipe(this.el);
-      }
+      // if (this.opts.swipe) {
+      //   this.addSwipe(this.el);
+      // }
     },
     showCurrent: function (i) {
       // this will show current match and hide the rest
@@ -32,7 +32,7 @@ var makeSlideShow = function (el, options) {
         this.counter = (this.counter - 1 < 0) ? this.numItems - 1 : this.counter - 1;
       }
       // http://stackoverflow.com/a/16053538/2006057
-      [].forEach.call(this.$items, function (el)) {
+      [].forEach.call(this.$items, function (el) {
         el.clasList.remove('matches-show');
       });
 
@@ -41,9 +41,9 @@ var makeSlideShow = function (el, options) {
     injectControls: function (el) {
       // add previous and next buttons to the Slideshow
       // swiping function will go here if we get fancy
-      var spanPrev = document.createElement("span"),
-      var spanPrev = document.createElement("span"),
-      var docFrag = document.createDocumentFragment();
+      var spanPrev = document.createElement('span'),
+          spanNext = document.createElement('span'),
+          docFrag = document.createDocumentFragment();
 
       spanPrev.classList.add('matches-prev');
       spanNext.classList.add('matches-next');
@@ -74,21 +74,13 @@ var makeSlideShow = function (el, options) {
         } else if (e.keyCode === 39) {
           that.showCurrent(1);
         }
-      };
-    },
-
-  addSwipe: function(el){
-    var that = this,
-    var ht = new Hammer(el);
-    ht.on('swiperight', function(e) {
-      that.showCurrent(-1);
-    });
-    ht.on('swipeleft', function(e) {
-      that.showCurrent(1);
-    });
-  },
-  [].forEach.call($slideshow, function (el) {
-    $slideshow = Object.create(Slideshow);
+      }
+    }
+  };
+  rankedDogs.forEach.call($slideshows, function (el) {
+    $slideshows = Object.create(Slideshow);
     $slideshow.init(el, options);
   });
 };
+
+makeSlideShow('.num1');
