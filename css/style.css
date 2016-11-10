@@ -348,7 +348,7 @@ h3.parkLocation {
 .register:hover {
 	/*background-color: rgba(30,174,219,.5);*/
 	/*background-color: rgba(177,171,210,1);*/
-		background-color: rgba(30,174,219,1);
+	background-color: rgba(30,174,219,1);
 	transition: all .5s ease;
 }
 
