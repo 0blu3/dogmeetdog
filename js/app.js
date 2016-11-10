@@ -1,9 +1,7 @@
 'use strict';
 
-// ***CONSTRUCTOR FUNCTION AND DUMMY ACCOUNTS***
-var dogs = []; // Dummy profiles are pushed here.
+var dogs = [];
 
-// The actual constructor function and dummy accounts.
 function Dog(name, breed, size, age, sex, fixed, neighborhood, prefAge, prefSize, prefSex, prefFixed, ratingSwimming, ratingFetch, ratingWalks, ratingRunning, ratingSunbathing, fileName){
   this.name = name;
   this.breed = breed;
