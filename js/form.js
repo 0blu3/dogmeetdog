@@ -88,7 +88,6 @@ function matchUserFixedPref() {
   }
 }
 
-// This part calculates how much a user matches a dog's non-numerical values
 function matchDogAgePref() {
   for (var i = 0; i < dogs.length; i++) {
     if (dogs[i].prefAge === 'Younger' && user.age < dogs[i].prefAge) {
