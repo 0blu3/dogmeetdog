@@ -33,7 +33,6 @@ function makeNewImage(src, parent, childId, cssClass) {
 
 function switchMainDogPicture(event) {
   event.preventDefault();
-
   console.log('switchMainDogPicture', event);
   console.log(event.target);
   console.log(event.target.id);
@@ -50,11 +49,7 @@ function makeProfileBoxes(rankedDogs) {
   var sideResultsDiv = document.getElementById('side-results');
   sideResultsDiv.innerHTML = '';
   console.log(resultsDiv);
-
-function makeProfileBoxes() {
-
   for (var i = 0; i < topDogs; i++) {
-
     if(i === 0){
       makeNewContainingElement('div', '', 'results', rankedDogs[i].name, 'profile-box');
       makeNewContainingElement('div', '', rankedDogs[i].name, rankedDogs[i].name + '-pic', 'profile-pic');
@@ -71,7 +66,6 @@ function makeProfileBoxes() {
       var anchor = makeNewAnchor('profile.html', rankedDogs[i].name + '-pic', rankedDogs[i].name + '-link');
       makeNewImage(rankedDogs[i].filePath, rankedDogs[i].name + '-link', i, 'clickable');
       anchor.addEventListener('click', switchMainDogPicture);
-
     }
   }
 }
