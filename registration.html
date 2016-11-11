@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
 <head>
   <meta charset="utf-8">
   <title>Dog Meet Dog - Registration</title>
@@ -50,6 +51,14 @@
 
             <label class="ageInput">Dog age:</label>
             <input id="age" type="text"></input>
+
+            <label class="radioLabel" id="size">Dog Size:</label>
+            <label class="bulletOptions" for="small">Small</label>
+            <input class="radioBullet size" type="radio" value="Small" name="dogSize">
+            <label class="bulletOptions" for="medium">Medium</label>
+            <input class="radioBullet size" type="radio" value="Medium" name="dogSize">
+            <label class="bulletOptions" for="large">Large</label>
+            <input class="radioBullet size" type="radio" value="Large" name="dogSize">
 
             <h3>Likes and Dislikes:</h3>
             <p>Rate on a scale of one to five, one being dislikes A LOT, five being LOVES.</p>
@@ -132,13 +141,23 @@
             <option value="sLakeUnion">South Lake Union</option>
             <option value="other">Other</option></select>
 
+            <label class="radioLabel" id="size-preference">Size Preference:</label>
+            <label class="bulletOptions" for="preferSmall">Prefer Small</label>
+            <input class="radioBullet prefSize" type="radio" value="Small" name="sizePref">
+            <label class="bulletOptions" for="preferMedium">Prefer Medium</label>
+            <input class="radioBullet prefSize" type="radio" value="Medium" name="sizePref">
+            <label class="bulletOptions" for="preferLarge">Prefer Large</label>
+            <input class="radioBullet prefSize" type="radio" value="Large" name="sizePref">
+            <label class="bulletOptions" for="noPref">No Preference</label>
+            <input class="radioBullet prefSize" type="radio" value="noPref" name="sizePref">
+
             <label class="radioLabel" id="age-preference">Age Preference:</label>
             <label class="bulletOptions" for="preferOlder">Prefer Older</label>
-            <input class="radioBullet prefAge" type="radio" value="Older">
+            <input class="radioBullet prefAge" type="radio" value="Older" name="agePref">
             <label class="bulletOptions" for="preferYounger">Prefer Younger</label>
-            <input class="radioBullet prefAge" type="radio" value="Younger">
+            <input class="radioBullet prefAge" type="radio" value="Younger" name="agePref">
             <label class="bulletOptions" for="aboutTheSame">About The Same</label>
-            <input class="radioBullet prefAge" type="radio" value="About the same">
+            <input class="radioBullet prefAge" type="radio" value="About the same" name="agePref">
 
             <label class="radioLabel" id="age-preference">Spay & Nueter Status Preference:</label>
             <label class="bulletOptions" for="fixed">Fixed</label>
@@ -146,29 +165,20 @@
             <label class="bulletOptions" for="noPref">No Preference</label>
             <input class="radioBullet prefFixed" type="radio" value="No Preference">
 
-            <label class="radioLabel" id="size-preference">Size Preference:</label>
-            <label class="bulletOptions" for="preferSmall">Small</label>
-            <input class="radioBullet prefSize" type="radio" value="Small">
-            <label class="bulletOptions" for="preferMedium">Medium</label>
-            <input class="radioBullet prefSize" type="radio" value="Medium">
-            <label class="bulletOptions" for="preferLarge">Large</label>
-            <input class="radioBullet prefSize" type="radio" value="Large">
-            <label class="bulletOptions" for="no-preference">No Preference</label>
-            <input class="radioBullet prefSize" type="radio" value="No Preference">
 
             <button id="submit-button" class="formButton" type="submit">Submit</button>
           </fieldset>
         </form>
+        </div>
       </div>
+      <footer class="twelve columns">
+        <ul>
+          <li class="grey copyright center"> &copy; Copyright 2016 DogMeetDog</li>
+        </ul>
+      </footer>
     </div>
-    <footer class="twelve columns">
-      <ul>
-        <li class="grey copyright center"> &copy; Copyright 2016 DogMeetDog</li>
-      </ul>
-    </footer>
-  </div><!-- container -->
-  </script>
-  <script src="js/app.js"></script>
-  <script src="js/form.js"></script>
-</body>
+    </script>
+    <script src="js/app.js"></script>
+    <script src="js/form.js"></script>
+  </body>
 </html>

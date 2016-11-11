@@ -50,6 +50,9 @@ function makeProfileBoxes(rankedDogs) {
   var sideResultsDiv = document.getElementById('side-results');
   sideResultsDiv.innerHTML = '';
   console.log(resultsDiv);
+
+function makeProfileBoxes() {
+
   for (var i = 0; i < topDogs; i++) {
 
     if(i === 0){
@@ -94,7 +97,7 @@ function getClickedArrayIndex(event) {
 }
 
 function displayResults() {
-  makeProfileBoxes(rankedDogs);  
+  makeProfileBoxes(rankedDogs);
 }
 
 displayResults();
