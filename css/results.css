@@ -1,0 +1,74 @@
+#results {
+
+  margin: 0;
+}
+
+#side-results {
+  max-height: 500px;
+  margin: 0;
+}
+
+.profile-box {
+  display: inline-block;
+}
+
+.profile-pic {
+  margin: 0 auto;
+}
+
+.side-profile-pic {
+  height: 166px;
+
+  }
+
+.profile-name {
+  margin:0 auto;
+  text-align: center;
+}
+
+.profile-name p {
+  margin: 0 auto;
+}
+
+.match-percent {
+  margin: 0 auto;
+  font-size: 64px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.great-match {
+  color: green;
+}
+
+.okay-match {
+  color: yellow;
+}
+
+.bad-match {
+  color: orange;
+}
+
+.poor-match {
+  color: red;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+img {
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+#profile-data {
+  margin: 0 auto;
+  width: 500px;
+}
+
+#picture-box {
+  width: 500px;
+  margin: 0 auto;
+}

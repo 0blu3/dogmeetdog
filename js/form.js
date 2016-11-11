@@ -1,4 +1,5 @@
 'use strict';
+
 var user = {
   ownerName: '',
   pupName: '',
@@ -19,14 +20,16 @@ var user = {
   ratingSunbathing: '',
 };
 
-var selectNeighborhood = document.getElementById('neighborhood');
-var selected = selectNeighborhood.options[selectNeighborhood.selectedIndex].value;
+function getNeighborhood() {
+  var neighborhood = document.getElementById('neighborhood');
+  var selected = neighborhood.options[neighborhood.selectedIndex].value;
+  user.neighborhood = selected;
+}
 
 function getRadioNumericalValues(elementClass) {
   var radio = document.getElementsByClassName(elementClass);
   for (var i = 0; i < radio.length; i++) {
     if (radio[i].checked) {
-      console.log(radio[i].value);
       user[elementClass] = parseInt(radio[i].value);
     }
   }
@@ -36,14 +39,11 @@ function getRadioTextValues(elementClass) {
   var radio = document.getElementsByClassName(elementClass);
   for (var i = 0; i < radio.length; i++) {
     if (radio[i].checked) {
-      console.log(radio[i].value);
       user[elementClass] = radio[i].value;
     }
   }
 }
-// ***CODE THAT RUNS THE MATCHING***
 
-// This part calculates how much a dog matches the user non-numerical values
 function matchNeighborhood() {
   for (var i = 0; i < dogs.length; i++) {
     if (dogs[i].neighborhood === user.neighborhood) {
@@ -88,7 +88,6 @@ function matchUserFixedPref() {
   }
 }
 
-// This part calculates how much a user matches a dog's non-numerical values
 function matchDogAgePref() {
   for (var i = 0; i < dogs.length; i++) {
     if (dogs[i].prefAge === 'Younger' && user.age < dogs[i].prefAge) {
@@ -125,7 +124,6 @@ function matchDogFixedPref() {
   }
 }
 
-// This part scores matches between numerical values;
 function compareratingSwimming() {
   for (var i = 0; i < dogs.length; i++) {
     var difference = Math.abs(user.ratingSwimming - dogs[i].ratingSwimming);
@@ -209,7 +207,6 @@ function getNumericalMatches() {
   compareratingSunbathing();
 }
 
-// Put it all together, now!
 function countMatches() {
   matchNeighborhood();
   matchUserAgePref();
@@ -223,14 +220,12 @@ function countMatches() {
   getNumericalMatches();
 }
 
-// Converts matches into a percentage.
 function getPercentage() {
   for (var i = 0; i < dogs.length; i++) {
     dogs[i].matchPercentage = Math.round((dogs[i].totalMatches / totalPossible) * 100);
   }
 }
 
-// Calculates the percent of matches for each dog and sort by percentage.
 var totalPossible = 34;
 function calculatePercentMatch() {
   countMatches();
@@ -240,14 +235,22 @@ function calculatePercentMatch() {
   });
 }
 
-// Send percent matched profiles to local storage
 function sendToLocalStorage() {
   localStorage.setItem('dogs', JSON.stringify(dogs));
 }
 
-document.getElementById('submit-button').onclick = function() {
+function validate() {
+  for (var i = 0; i < Object.values(user).length; i++) {
+    if (Object.values(user)[i] === '') {
+      alert('Please fill out the form completely so that we might better match you with a furry friend!');
+      return;
+    }
+  }
+  localStorage.setItem('user', JSON.stringify(user));
+  calculatePercentMatch();
+  sendToLocalStorage();
   location.href = 'results.html';
-};
+}
 
 function submit(event) {
   event.preventDefault();
@@ -255,7 +258,10 @@ function submit(event) {
   user.pupName = event.target.pupName.value;
   user.breed = event.target.breed.value;
   user.age = parseInt(event.target.age.value);
+  getNeighborhood();
   getRadioTextValues('sex');
+  getRadioTextValues('fixed');
+  getRadioTextValues('size');
   getRadioNumericalValues('ratingSwimming');
   getRadioNumericalValues('ratingFetch');
   getRadioNumericalValues('ratingWalks');
@@ -265,9 +271,7 @@ function submit(event) {
   getRadioTextValues('prefSex');
   getRadioTextValues('prefSize');
   getRadioTextValues('prefFixed');
-  localStorage.setItem('user', JSON.stringify(user));
-  calculatePercentMatch();
-  sendToLocalStorage();
+  validate();
 }
 
 var inputForm = document.getElementById('registration-form');

@@ -1,5 +1,7 @@
 'use strict';
 
+var inputForm = document.getElementById('registration-form');
+inputForm.addEventListener('submit', sendMessage);
 var profileIndex = JSON.parse(localStorage.getItem('profileClick'));
 var dogs = JSON.parse(localStorage.getItem('dogs'));
 var profiledDog = dogs[profileIndex];
@@ -57,6 +59,16 @@ function populateTable() {
     makeNewElement('td', details[i], newRow, '');
   }
   pawRatings();
+}
+
+function sendMessage(event) {
+  event.preventDefault();
+  var textBox = document.getElementsByTagName('textarea')[0];
+  if (textBox.value === '') {
+    alert('You have to enter a message to send it!');
+  }
+  textBox.value = '';
+  alert('Your message has been sent!');
 }
 
 makeNewImage(profiledDog.filePath, 'picture-box', 'fullsize-pic', '');
