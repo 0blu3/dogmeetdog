@@ -2,9 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Dog Meet Dog - Results</title>
+  <title>Dog Meet Dog - Home</title>
   <link href="https://fonts.googleapis.com/css?family=Antic+Slab|Work+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Roboto" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css" media="screen" title="no title">
   <link rel="stylesheet" href="css/skeleton.css" media="screen" title="no title">
   <link rel="stylesheet" href="css/style.css" media="screen" title="no title">
@@ -13,41 +12,27 @@
 <body>
   <div class="container">
     <header>
-      <div id="dog" class="offset-by-one column one column">
-      </div>
-      <div id="logo" class="six columns add-bottom">
-        <h1>DOG MEET DOG</h1>
-      </div>
-    </header>
-    <nav>
-      <ul>
-        <a href="index.html"><li>Home</li></a>
-        <a href="about-us.html"><li>About Us</li></a>
-        <a href="park-locations.html"><li>Park Locations</li></a>
-      </ul>
-    </nav>
+      <div id="dog" class="offset-by-one column four columns">
+         </div>
+         <div id="logo" class="offset-by-three columns six columns add-bottom">
+            <h1>Dog Meet Dog</h1>
+          </div>
+             </header>
+          <nav>
+            <ul>
+              <a href="index.html"><li class="active">Home</li></a>
+              <a href="main.html"><li>Main</li></a>
+              <a href="about-us.html"><li>About Us</li></a>
+            </ul>
+          </nav>
     <div class="main twelve columns add-bottom">
       <h3>Meet These Dogs!</h3>
-      <div id="results">
-        <div class="profile-box">
-          <figure>
-            <div class="matches-slides">
-              <figure>
-                <img id="clickable" src ="Assets/images/profile-photos/allison.jpg" width="100%" />
-                <figcaption>Dog name goes here</figcaption>
-              </figure>
 
-              <figure>
-                <img id="clickable" src="Assets/images/profile-photos/zeke.jpg" width="100%" />
-              </figure>
+      <div id="results" class="offset-by-one column seven columns">
 
-              <figure>
-                <img id="clickable" src="Assets/images/profile-photos/buggy.jpg" width="100%" />
-              </figure>
 
-            </div>
-          </figure>
-        </div>
+      </div>
+      <div id="side-results" class="three columns">
       </div>
     </div>
     <footer class="twelve columns">
@@ -56,21 +41,13 @@
       </ul>
     </footer>
   </div><!-- container -->
-  <script src="js/app.js"></script>
-  <script src="js/hammer-time.min.js"></script>
-  <script src="js/slider.js"></script>
+  <!-- <script src="js/hammer-time.min.js"></script> -->
+
   <script src="js/display-results.js"></script>
-  <script>
-    var opts = {
-      swipe : true
-  };
-    makeSlideShow('.num1', opts);
-    var opts2 = {
-        auto : false,
-        fullScreen : true,
-        swipe : true
-    };
-  </script>
+  <script src="js/slider.js"></script>
+
 
 </body>
+
+
 </html>
