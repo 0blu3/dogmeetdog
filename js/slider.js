@@ -82,5 +82,3 @@ var makeSlideShow = function (el, options) {
     $slideshow.init(el, options);
   });
 };
-
-makeSlideShow('.num1');
