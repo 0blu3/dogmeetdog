@@ -1,17 +1,25 @@
 #results {
-  width: 75%;
-  margin: 0 auto;
+
+  margin: 0;
+}
+
+#side-results {
+  max-height: 500px;
+  margin: 0;
 }
 
 .profile-box {
-  width: 150px;
   display: inline-block;
 }
 
 .profile-pic {
-  max-width: 150px;
   margin: 0 auto;
 }
+
+.side-profile-pic {
+  height: 166px;
+
+  }
 
 .profile-name {
   margin:0 auto;

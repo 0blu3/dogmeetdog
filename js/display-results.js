@@ -1,11 +1,9 @@
 'use strict';
 
-// Taking match results from previous page
 var user = JSON.parse(localStorage['user']);
 var rankedDogs = JSON.parse(localStorage['dogs']);
-var topDogs = 3;
+var topDogs = 4;
 
-// General function to make new HTML elements
 function makeNewContainingElement(tag, innerText, parent, childId, cssClass) {
   var parent = document.getElementById(parent);
   var newEl = document.createElement(tag);
@@ -21,6 +19,7 @@ function makeNewAnchor(href, parent, childId) {
   newAnchor.setAttribute('href', href);
   newAnchor.setAttribute('id', childId);
   parent.appendChild(newAnchor);
+  return newAnchor;
 }
 
 function makeNewImage(src, parent, childId, cssClass) {
@@ -32,29 +31,56 @@ function makeNewImage(src, parent, childId, cssClass) {
   parent.appendChild(newImg);
 }
 
-// Renders the HTML of the profiles from the objects in the array
-function makeProfileBoxes() {
+function switchMainDogPicture(event) {
+  event.preventDefault();
+
+  console.log('switchMainDogPicture', event);
+  console.log(event.target);
+  console.log(event.target.id);
+  var clickedDog = rankedDogs[event.target.id];
+  var formerMainDog = rankedDogs[0];
+  rankedDogs[0] = clickedDog;
+  rankedDogs[event.target.id] = formerMainDog;
+  makeProfileBoxes(rankedDogs);
+}
+
+function makeProfileBoxes(rankedDogs) {
+  var resultsDiv = document.getElementById('results');
+  resultsDiv.innerHTML = '';
+  var sideResultsDiv = document.getElementById('side-results');
+  sideResultsDiv.innerHTML = '';
+  console.log(resultsDiv);
   for (var i = 0; i < topDogs; i++) {
-    makeNewContainingElement('div', '', 'results', rankedDogs[i].name, 'profile-box');
-    makeNewContainingElement('div', '', rankedDogs[i].name, rankedDogs[i].name + '-pic', 'profile-pic');
-    makeNewAnchor('profile.html', rankedDogs[i].name + '-pic', rankedDogs[i].name + '-link');
-    makeNewImage(rankedDogs[i].filePath, rankedDogs[i].name + '-link', i, 'clickable');
-    makeNewContainingElement('div', '', rankedDogs[i].name, rankedDogs[i].name + '-name', 'profile-name');
-    makeNewContainingElement('p', rankedDogs[i].name, rankedDogs[i].name + '-name', '', '');
-    makeNewContainingElement('div', '', rankedDogs[i].name, rankedDogs[i].name + '-percent', 'match-percent');
-    makeNewContainingElement('p', rankedDogs[i].matchPercentage + '%', rankedDogs[i].name + '-percent', rankedDogs[i].name + '-percent-text', '');
+
+    if(i === 0){
+      makeNewContainingElement('div', '', 'results', rankedDogs[i].name, 'profile-box');
+      makeNewContainingElement('div', '', rankedDogs[i].name, rankedDogs[i].name + '-pic', 'profile-pic');
+      makeNewAnchor('profile.html', rankedDogs[i].name + '-pic', rankedDogs[i].name + '-link');
+      makeNewImage(rankedDogs[i].filePath, rankedDogs[i].name + '-link', i, 'clickable');
+      makeNewContainingElement('div', '', rankedDogs[i].name, rankedDogs[i].name + '-name', 'profile-name');
+      makeNewContainingElement('p', rankedDogs[i].name, rankedDogs[i].name + '-name', '', '');
+      makeNewContainingElement('div', '', rankedDogs[i].name, rankedDogs[i].name + '-percent', 'match-percent');
+      makeNewContainingElement('p', rankedDogs[i].matchPercentage + '%', rankedDogs[i].name + '-percent', rankedDogs[i].name + '-percent-text', '');
+      percentageColor();
+    } else {
+      makeNewContainingElement('div', '', 'side-results', rankedDogs[i].name, 'profile-box');
+      makeNewContainingElement('div', '', rankedDogs[i].name, rankedDogs[i].name + '-pic', 'side-profile-pic');
+      var anchor = makeNewAnchor('profile.html', rankedDogs[i].name + '-pic', rankedDogs[i].name + '-link');
+      makeNewImage(rankedDogs[i].filePath, rankedDogs[i].name + '-link', i, 'clickable');
+      anchor.addEventListener('click', switchMainDogPicture);
+
+    }
   }
 }
 
-// Color codes the quality of the match.
 function percentageColor() {
   for (var i = 0; i < 3; i++) {
-    var percentText = document.getElementById(rankedDogs[i].name + '-percent-text');
-    if (rankedDogs[i].matchPercentage >= 80) {
+    var percentText = document.getElementById(rankedDogs[0].name + '-percent-text');
+    if (rankedDogs[0].matchPercentage >= 80) {
       percentText.setAttribute('class', 'great-match');
-    } else if (rankedDogs[i].matchPercentage < 80 && rankedDogs[i].matchPercentage >= 60) {
+    } else if (rankedDogs[0].matchPercentage < 80 && rankedDogs[0].matchPercentage >= 60) {
       percentText.setAttribute('class', 'okay-match');
-    } else if (rankedDogs[i].matchPercentage < 60 && rankedDogs[i].matchPercentage >= 40) {
+    } else if (rankedDogs[0].matchPercentage < 60 && rankedDogs[0].matchPercentage >= 40) {
       percentText.setAttribute('class', 'bad-match');
     } else {
       percentText.setAttribute('class', 'poor-match');
@@ -62,24 +88,18 @@ function percentageColor() {
   }
 }
 
-// Event listener for capturing which picture gets clicked on and passed to the profile page.
-
 function getClickedArrayIndex(event) {
   var profileClick = event.target.id;
   localStorage.setItem('profileClick', JSON.stringify(profileClick));
 }
 
-// The function that does everying at once.
 function displayResults() {
-  makeProfileBoxes();
-  percentageColor();
+  makeProfileBoxes(rankedDogs);  
 }
 
-// Render page and add event listeners
 displayResults();
 
 var imgTags = document.getElementsByClassName('clickable');
 for (var i = 0; i < imgTags.length; i++) {
-  console.log('hi there');
   imgTags[i].addEventListener('click', getClickedArrayIndex);
 }
