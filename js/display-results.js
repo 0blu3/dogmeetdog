@@ -33,9 +33,6 @@ function makeNewImage(src, parent, childId, cssClass) {
 
 function switchMainDogPicture(event) {
   event.preventDefault();
-  console.log('switchMainDogPicture', event);
-  console.log(event.target);
-  console.log(event.target.id);
   var clickedDog = rankedDogs[event.target.id];
   var formerMainDog = rankedDogs[0];
   rankedDogs[0] = clickedDog;
