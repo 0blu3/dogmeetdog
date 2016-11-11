@@ -66,9 +66,10 @@ function sendMessage(event) {
   var textBox = document.getElementsByTagName('textarea')[0];
   if (textBox.value === '') {
     alert('You have to enter a message to send it!');
+  } else {
+    textBox.value = '';
+    alert('Your message has been sent!');
   }
-  textBox.value = '';
-  alert('Your message has been sent!');
 }
 
 makeNewImage(profiledDog.filePath, 'picture-box', 'fullsize-pic', '');
