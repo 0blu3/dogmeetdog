@@ -66,13 +66,11 @@ img {
 footer {
 	margin: 0;
 	height: 75px;
+	color: #fff;
 }
 .center {
 	text-align: center;
 	margin: 0 auto;
-}
-.grey {
-	background-color: rgba(50, 50, 50, 0.3);
 }
 .copyright {
 	text-align: center;
