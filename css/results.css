@@ -17,8 +17,7 @@
 }
 
 .side-profile-pic {
-  height: 166px;
-
+  height: 138px;
   }
 
 .profile-name {
@@ -66,9 +65,4 @@ img {
 #profile-data {
   margin: 0 auto;
   width: 500px;
-}
-
-#picture-box {
-  width: 500px;
-  margin: 0 auto;
 }

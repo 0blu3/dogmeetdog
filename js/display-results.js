@@ -48,7 +48,7 @@ function makeProfileBoxes(rankedDogs) {
   console.log(resultsDiv);
   for (var i = 0; i < topDogs; i++) {
     if(i === 0){
-      makeNewContainingElement('div', '', 'results', rankedDogs[i].name, 'profile-box');
+      makeNewContainingElement('div', '', 'results', rankedDogs[i].name, 'profile-box offset-by-one column');
       makeNewContainingElement('div', '', rankedDogs[i].name, rankedDogs[i].name + '-pic', 'profile-pic');
       makeNewAnchor('profile.html', rankedDogs[i].name + '-pic', rankedDogs[i].name + '-link');
       makeNewImage(rankedDogs[i].filePath, rankedDogs[i].name + '-link', i, 'clickable');
@@ -58,7 +58,7 @@ function makeProfileBoxes(rankedDogs) {
       makeNewContainingElement('p', rankedDogs[i].matchPercentage + '%', rankedDogs[i].name + '-percent', rankedDogs[i].name + '-percent-text', '');
       percentageColor();
     } else {
-      makeNewContainingElement('div', '', 'side-results', rankedDogs[i].name, 'profile-box');
+      makeNewContainingElement('div', '', 'side-results', rankedDogs[i].name, 'profile-box offset-by-one column');
       makeNewContainingElement('div', '', rankedDogs[i].name, rankedDogs[i].name + '-pic', 'side-profile-pic');
       var anchor = makeNewAnchor('profile.html', rankedDogs[i].name + '-pic', rankedDogs[i].name + '-link');
       makeNewImage(rankedDogs[i].filePath, rankedDogs[i].name + '-link', i, 'clickable');
