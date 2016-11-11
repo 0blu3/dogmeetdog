@@ -45,7 +45,6 @@ function makeProfileBoxes(rankedDogs) {
   resultsDiv.innerHTML = '';
   var sideResultsDiv = document.getElementById('side-results');
   sideResultsDiv.innerHTML = '';
-  console.log(resultsDiv);
   for (var i = 0; i < topDogs; i++) {
     if(i === 0){
       makeNewContainingElement('div', '', 'results', rankedDogs[i].name, 'profile-box');
