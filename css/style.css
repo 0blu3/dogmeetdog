@@ -359,17 +359,15 @@ h3.parkLocation {
 }
 
 #results {
-  width: 75%;
   margin: 0 auto;
 }
 
 .profile-box {
-  width: 150px;
   display: inline-block;
 }
 
 .profile-pic {
-  max-width: 150px;
+  max-width: 350px;
   margin: 0 auto;
 }
 
@@ -384,7 +382,7 @@ h3.parkLocation {
 
 .match-percent {
   margin: 0 auto;
-  font-size: 64px;
+  font-size: 3em;
   font-weight: bolder;
   text-align: center;
 }
