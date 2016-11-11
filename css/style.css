@@ -511,3 +511,7 @@ img {
   width: 500px;
   margin: 0 auto;
 }
+
+textarea {
+	width: 100%;
+}
